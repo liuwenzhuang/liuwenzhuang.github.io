@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     RedCloth (4.2.9)
     activesupport (4.2.6)
@@ -122,12 +122,14 @@ GEM
       ethon (>= 0.8.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    wdm (0.1.1)
 
 PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
   github-pages
+  wdm
 
 BUNDLED WITH
    1.11.2
