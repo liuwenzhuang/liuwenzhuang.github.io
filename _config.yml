@@ -1,0 +1,29 @@
+# Site settings
+title: Newbie's Blogs
+email: liu1114589929@gmail.com
+description: >
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: ""
+fixedNav: 'true' # true or false
+theme: blue # green, blue, orange, purple, grey
+twitterUsername: liuwenzhuang
+githubUsername: liuwenzhuang
+codepenUsername: liuwenzhuang
+
+comments:
+    disqus: "liuwenzhuang"
+#    isso: "comments.mysite.org"
+
+# Build settings
+permalink: /:year/:month/:title
+markdown: kramdown
+include: [_pages]
+exclude: [_site]
+sass:
+  style: compressed
+
+paginate: 10
+gems: [jekyll-paginate]
