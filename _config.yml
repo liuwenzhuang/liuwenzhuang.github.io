@@ -7,6 +7,7 @@ description: >
   Google search results) and in your feed.xml site description.
 baseurl: ""
 url: ""
+urlPrefix: http://liuwenzhuang.github.io
 fixedNav: 'true' # true or false
 theme: blue # green, blue, orange, purple, grey
 twitterUsername: liuwenzhuang
