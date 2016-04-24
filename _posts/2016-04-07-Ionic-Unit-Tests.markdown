@@ -10,12 +10,14 @@ categories: jekyll update
 [Angular1-style]: https://github.com/johnpapa/angular-styleguide/tree/master/a1/README.md
 [source-code]: https://github.com/liuwenzhuang/IonicTestProjectTPL
 [angular-mock]: https://docs.angularjs.org/guide/unit-testing#angular-mocks
+[karma-browsers]: http://karma-runner.github.io/0.13/config/browsers.html
+[PhantomJS]: http://phantomjs.org/
 代码测试的必要性，对任何编程语言都毋需赘述，JavaScript和HTML自然不例外。本文描述如何对Ionic进行单元测试（Unit Tests）。
 
-对于测试环境而言，目前框架很多，本文使用的是[Karma][karma-docs]，尤其是其本身就为Angular而生，故能够与Angular完美集成。
-对于测试用例而言，框架也有很多，本文使用的是[Jasmine][Jasmine-docs]。
+对于测试环境而言，目前框架很多，本文使用的是[Karma][karma-docs]{:target="_blank"}，尤其是其本身就为Angular而生，故能够与Angular完美集成。
+对于测试用例而言，框架也有很多，本文使用的是[Jasmine][Jasmine-docs]{:target="_blank"}。
 
-本文工程基于ionic#1.2.4的tabs工程模板进行测试(angular#1.4.3)，但是为了更加符合[Angular 1编码规范][Angular1-style]，对工程的目录结构及代码的风格结构做了相应变化，大家可先熟悉[源码][source-code]后，再参照下文观看。
+本文工程基于ionic#1.2.4的tabs工程模板进行测试(angular#1.4.3)，但是为了更加符合[Angular 1编码规范][Angular1-style]{:target="_blank"}，对工程的目录结构及代码的风格结构做了相应变化，大家可先熟悉[源码][source-code]{:target="_blank"}后，再参照下文观看。
 
 单元测试（Unit Tests）
 ================
@@ -23,7 +25,7 @@ categories: jekyll update
 
 安装测试环境
 ----------------
-我们需要使用[Karma][karma-docs]、[Jasmine][Jasmine-docs]以及[angular-mocks][angular-mock]:
+我们需要使用[Karma][karma-docs]{:target="_blank"}、[Jasmine][Jasmine-docs]{:target="_blank"}以及[angular-mocks][angular-mock]{:target="_blank"}:
 
 ~~~ bash
 $ npm install karma --save-dev
@@ -51,7 +53,7 @@ $ npm install -g karma-cli
 $ sudo npm install -g karma-cli
 ~~~
 
-最后，我们需要使用一种浏览器作为我们单元测试的载体，Karma支持[大多数主流浏览器](http://karma-runner.github.io/0.13/config/browsers.html)。这里我们使用最流行的[PhantomJS](http://phantomjs.org/)：
+最后，我们需要使用一种浏览器作为我们单元测试的载体，Karma支持[大多数主流浏览器][karma-browsers]{:target="_blank"}。这里我们使用最流行的[PhantomJS][PhantomJS]{:target="_blank"}：
 
 ~~~ bash
 $ npm install karma-phantomjs-launcher --save-dev
@@ -143,7 +145,7 @@ files: [
 > 1.首先使用`module`方法（angular-mocks.js提供）加载工程module，而且将其置于`beforeEach`方法（jasmine提供）中，能够保证其能够在测试用例执行之前被首先执行。<br>
 > 2.然后我们使用`inject`方法插入了一些必要模块：  \$rootScope用来实例化scope对象；  $controller用来实例化controller。<br>
 > 3.`$controller`方法接收两个参数，第一个参数为要实例化的controller的名称，第二个参数为此controller的依赖列表。<br>
-> 4.测试用例也是编程，若对其语法不了解，首先需要熟悉[Jasmine][Jasmine-docs]。<br>
+> 4.测试用例也是编程，若对其语法不了解，首先需要熟悉[Jasmine][Jasmine-docs]{:target="_blank"}。<br>
 
 执行测试：
 
@@ -197,13 +199,13 @@ $ karma start karma.conf.js
 
 
 ----------
-[源码][source-code]可在Github上找到。
+[源码][source-code]{:target="_blank"}可在Github上找到。
 
 > 参考文档:<br>
-> [ionic工程组织文件][ionic-project-structure]<br>
-> [Angular Unit Tests][angular-unit-tests]<br>
-> [unit-testing-ionic-app][ionic-unit-tests]<br>
-> [write-automated-unit-tests][automated-unit-tests]<br>
+> [ionic工程组织文件][ionic-project-structure]{:target="_blank"}<br>
+> [Angular Unit Tests][angular-unit-tests]{:target="_blank"}<br>
+> [unit-testing-ionic-app][ionic-unit-tests]{:target="_blank"}<br>
+> [write-automated-unit-tests][automated-unit-tests]{:target="_blank"}<br>
 
 [ionic-project-structure]: http://blog.csdn.net/u010730126/article/details/49669765
 [angular-unit-tests]: https://docs.angularjs.org/guide/unit-testing#angular-mocks
