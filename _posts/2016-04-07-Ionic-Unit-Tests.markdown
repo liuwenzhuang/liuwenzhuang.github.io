@@ -65,7 +65,8 @@ $ npm install karma-firefox-launcher --save-dev
 ...
 ~~~
 
-##配置测试环境
+## 配置测试环境
+
 进行编写测试用例之前，首先需要进行测试环境的配置：
 
 ~~~ bash
@@ -94,7 +95,8 @@ files: [
 
 ##编写测试用例
 
-###测试Controller
+### 测试Controller
+
 我们以`Chats`页面的controller为例，编写测试用例，命名为`tab-chats.controller.spec.js`
 
 ~~~ javascript
@@ -150,7 +152,8 @@ $ karma start karma.conf.js
 
 `describe`方法使得我们可以组合多个测试，`it`方法定义了实际的测试用例，注意他们的第一个参数都是说明性文字，即自述性，这样就为测试的调试提供了极大的便利，`expect`方法处于`it`方法之间，用于测试各功能点是否按照我们的预期那样执行。每个`it`方法中可使用任意多个`expect`方法，不过要酌情处理，否则不易于排错。
 
-###测试Service
+### 测试Service
+
 我们以`Chats`页面的service为例，编写测试用例，命名为`tab-chats.service.spec.js`：
 
 ~~~ javascript
