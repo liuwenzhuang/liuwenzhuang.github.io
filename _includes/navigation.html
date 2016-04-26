@@ -1,7 +1,7 @@
 <nav class="c-navigation {% if site.fixedNav == 'true' %}is-fixed{% endif %}">
   <div class="c-navigation__container u-container">
-    <a class="c-navigation__item {% if page.url == '/' %}is-active{% endif %}" href="{{ "/" | prepend: site.baseurl }}">Home</a>
-    <a class="c-navigation__item {% if page.url == '/articles/' %}is-active{% endif %}" href="{{ "/articles/" | prepend: site.baseurl }}">Articles</a>
-    <a class="c-navigation__item {% if page.url == '/about/' %}is-active{% endif %}" href="{{ "/about/" | prepend: site.baseurl }}">About</a>
+    {% for menu in site.data.menu.menus %}
+      <a class="c-navigation__item {% if page.url == {{ menu.url }} %}is-active{% endif %}" href="{{site.baseurl}}{{menu.url}}">{{ menu.name }}</a>
+    {% endfor %}
   </div>
 </nav>

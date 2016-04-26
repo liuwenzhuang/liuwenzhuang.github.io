@@ -1,9 +1,7 @@
 ---
-layout: post
 title:  "Ionic单元测试"
 date:   2016-04-07 12:11:21
-comments: true
-categories: jekyll update
+tag: ionic1
 ---
 [karma-docs]: https://karma-runner.github.io
 [Jasmine-docs]: http://jasmine.github.io/

@@ -28,3 +28,13 @@ sass:
 
 paginate: 10
 gems: [jekyll-paginate]
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      categories: ['ionic', 'angular']

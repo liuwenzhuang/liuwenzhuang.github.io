@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Articles
-permalink: /articles/
+title: Ionic1 Blogs
+permalink: /ionic1/
 ---
-{% for post in site.posts  %}
+{% for post in site.tags.ionic1  %}
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
