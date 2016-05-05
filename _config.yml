@@ -24,10 +24,10 @@ markdown: kramdown
 include: [_pages]
 exclude: [_site]
 sass:
-  style: compressed
+  style: compressed #minify css
 
-paginate: 10
-gems: [jekyll-paginate]
+#paginate: 10
+#gems: [jekyll-paginate]
 
 defaults:
   -

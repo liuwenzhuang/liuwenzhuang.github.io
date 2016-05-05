@@ -3,6 +3,12 @@
 ---
 @charset "utf-8";
 
+//robotodraft
+$RobotoDraftFontPath: "../fonts/robotodraft";
+$RobotoDraftFontName: "RobotoDraft";
+$RobotoDraftFontVersion: "1.0.0";
+@import "robotodraft/robotodraft";
+
 // Helpers
 @import
   'helpers/variables',
