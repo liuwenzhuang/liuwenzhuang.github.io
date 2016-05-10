@@ -46,8 +46,6 @@ $PROJECT_DIR/
         index.html
 ~~~
 
------------------------
-
 ##一.检查javascript
 
 ###1.这一步需要用到jshint以及async，可以使用npm安装：
