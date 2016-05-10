@@ -46,16 +46,18 @@ $PROJECT_DIR/
         index.html
 ~~~
 
-##一.检查javascript
+-----------------------
 
-###1.这一步需要用到jshint以及async，可以使用npm安装：
+## 一.检查javascript
+
+### 1.这一步需要用到jshint以及async，可以使用npm安装：
 
 ~~~ bash
 $ npm install jshint --save-dev
 $ npm install async --save-dev
 ~~~
 
-###2.复制cordova hooks文件：
+### 2.复制cordova hooks文件：
 
 将[此文件][010_jshint]下载，并复制到*$PROJECT_DIR/hooks/before_prepare*文件夹里。特别注意需要给予此文件“可执行”的权限，即
 
@@ -81,7 +83,7 @@ var foldersToProcess = [
 ];
 ~~~
 
-###3.测试：
+### 3.测试：
 
 终端执行：
 
@@ -108,17 +110,17 @@ var temp = eval('(' + JSON.stringify(response) + ')');
 
 ----------------------------------
 
-##二.将html页面代码转换为angular的JS代码
+## 二.将html页面代码转换为angular的JS代码
 
 这一步对html页面代码的混淆是将html页面代码处理成angular的js代码（保存到一个js文件中）。
 
-###1.这一步需要用到*gulp-angular-templatecache*。可以使用npm安装：
+### 1.这一步需要用到*gulp-angular-templatecache*。可以使用npm安装：
 
 ~~~ bash
 npm install gulp-angular-templatecache --save-dev
 ~~~
 
-###2.修改*gulpfile.js*文件：
+### 2.修改*gulpfile.js*文件：
 
 ~~~ javascript
 var templateCache = require('gulp-angular-templatecache');
@@ -151,7 +153,7 @@ gulp.task('watch', function() {
 });
 ~~~
 
-###3.修改*ionic.project*文件：
+### 3.修改*ionic.project*文件：
 
 ~~~ bash
 "gulpStartupTasks": [
@@ -161,20 +163,20 @@ gulp.task('watch', function() {
 ]
 ~~~
 
-###4.在*app.js*中增加`templates`模块依赖：
+### 4.在*app.js*中增加`templates`模块依赖：
 
 ~~~ javascript
  angular.module('starter', ['ionic', 'starter.controllers', 'templates'])
 ~~~
 
-###5.在*index.html*中引入*templates.js*文件：
+### 5.在*index.html*中引入*templates.js*文件：
 
 ~~~ html
 <script src="js/templates.js"></script>
 ~~~
 注意：这里的*templates.js*文件是下一步生成的。
 
-###6.测试：
+### 6.测试：
 
 ~~~ bash
 $ ionic serve
@@ -188,7 +190,7 @@ $ gulp templatecache
 
 执行完毕，在*$PROJECT_DIR/www/js*目录下将生成*templates.js*文件，此文件中将包含对html页面代码的转换结果。
 
-###7.改变templateUrl路径：
+### 7.改变templateUrl路径：
 
 打开*$PROJECT_DIR/www/js/templates.js*文件，我们可以看到类似于下面的代码：
 
@@ -230,17 +232,17 @@ app.js之前可能的情况：
 
 ----------
 
-##三.启用angular ng-strict-di
+## 三.启用angular ng-strict-di
 
 在我们进行代码压缩之前，我们需要启用angular的ng-strict-di，即严格依赖注入，使用ng-strict-di使得工程中依赖注入不会有问题，更多关于ng-strict-di可以看[这里][ng-strict-di-doc]。
 
-###1.首先通过npm安装*gulp-ng-annotate*：
+### 1.首先通过npm安装*gulp-ng-annotate*：
 
 ~~~ bash
 $ npm install gulp-ng-annotate --save-dev
 ~~~
 
-###2.其次，修改*gulpfile.js*文件：
+### 2.其次，修改*gulpfile.js*文件：
 
 ~~~ javascript
 var ngAnnotate = require('gulp-ng-annotate');
@@ -275,7 +277,7 @@ gulp.task('watch', function() {
 });
 ~~~
 
-###3.修改*ionic.project*文件：
+### 3.修改*ionic.project*文件：
 
 ~~~ bash
 "gulpStartupTasks": [
@@ -286,7 +288,7 @@ gulp.task('watch', function() {
 ]
 ~~~
 
-###4.重新定位index.html里js的文件：
+### 4.重新定位index.html里js的文件：
 
 ~~~ html
 <script src="dist/dist_js/app/app.js"></script>  
@@ -295,13 +297,13 @@ gulp.task('watch', function() {
 <script src="dist/dist_js/app/templates.js"></script>
 ~~~
 
-###5.在`ng-app`标签下加入directive:`ng-strict-di`：
+### 5.在`ng-app`标签下加入directive:`ng-strict-di`：
 
 ~~~ html
 <body ng-app="your-app" ng-strict-di>
 ~~~
 
-###6.测试
+### 6.测试
 
 ~~~ bash
 $ ionic serve
@@ -318,15 +320,15 @@ $ gulp ng_annotate
 
 ----------
 
-##四.合并js文件以及css文件
+## 四.合并js文件以及css文件
 
-###1.通过npm安装*gulp-useref*：
+### 1.通过npm安装*gulp-useref*：
 
 ~~~ bash
 $ npm install gulp-useref --save-dev
 ~~~
 
-###2.其次，修改*gulpfile.js*文件：
+### 2.其次，修改*gulpfile.js*文件：
 
 ~~~ javascript
 var useref = require('gulp-useref');
@@ -366,7 +368,7 @@ gulp.task('watch', function() {
   });
 ~~~
 
-###3.修改*ionic.project*文件：
+### 3.修改*ionic.project*文件：
 
 ~~~ bash
 "gulpStartupTasks": [
@@ -378,7 +380,7 @@ gulp.task('watch', function() {
 ]
 ~~~
 
-###4.修改*index.html*文件，对需要合并的js文件和css文件进行处理：
+### 4.修改*index.html*文件，对需要合并的js文件和css文件进行处理：
 
 ~~~ html
 <!-- build:css dist_css/styles.css -->
@@ -397,7 +399,7 @@ gulp.task('watch', function() {
 
 注意：其中使用成对注释符包裹的部分会被进行合并处理，可能有些外部的css文件或js文件不想被处理，那么就保持原状即可（不使用此种方式包裹）。
 
-###5.测试
+### 5.测试
 
 ~~~ bash
 $ ionic serve
@@ -426,16 +428,16 @@ $ npm install gulp-useref@2.1.0 --save-dev
 
 ----------
 
-##五.最后一步
+## 五.最后一步
 
-###1.使用npm安装`cordova-uglify`以及`mv`：
+### 1.使用npm安装`cordova-uglify`以及`mv`：
 
 ~~~ bash
 $ npm install cordova-uglify --save-dev
 $ npm instal mv --save-dev
 ~~~
 
-###2.复制cordova hooks文件：
+### 2.复制cordova hooks文件：
 
 将[这些文件][after-prepare-files]添加至$PROJECT_DIR/hooks/after_prepare文件夹中。并且要注意这些文件中的有关路径的操作，是对应于前几步中的路径的，如果工程结构不一样，请自行调整这些文件中有关路径的部分。特别注意需要给予此文件“可执行”的权限，即
 

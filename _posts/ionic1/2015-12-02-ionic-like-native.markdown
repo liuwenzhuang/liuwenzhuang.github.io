@@ -15,7 +15,7 @@ tag: ionic1
 
 混合开发技术仍在飞速的发展中，现在是加入其中的极好时机。本文将讲述4中方法提升ionic应用的性能，使其更加贴近原生。
 
-##1.原生切换动画
+## 1.原生切换动画
 
 感谢[Native Page Transitions Cordova插件][native-transitions-plugin]，让我们能够在混合应用使用原生的切换动画。
 
@@ -66,9 +66,9 @@ angular.module('yourApp', ['ionic','ionic-native-transitions'])
 
 ------------------------------------
 
-##2.原生滚动
+## 2.原生滚动
 
-###ionic1.2之前版本：
+### ionic1.2之前版本：
 
 默认使用javascript的滚动效果，不是很理想，特别是对于android设备来说，如果还存在大量图片，情况将更加糟糕。
 
@@ -87,7 +87,7 @@ angular.module('yourApp', ['ionic','ionic-native-transitions'])
 
 如果仅是想在个别页面使用原生滚动，可以在页面的`ion-content`标签中添加`overflow-scroll='true'`。
 
-###ionic1.2及以后版本：
+### ionic1.2及以后版本：
 
 默认采用原生滚动，即不用像之前版本那样进行配置，如果想要使用javascript滚动，可以使用下面的方式在全局启用javascript滚动：
 
@@ -106,7 +106,7 @@ angular.module('yourApp', ['ionic','ionic-native-transitions'])
 
 ------------------------------------
 
-##3.缓存
+## 3.缓存
 
 ionic提供了默认的缓存机制，不过可能并不能满足需要。
 
@@ -162,7 +162,7 @@ $scope.post = postCache.get(id);
 
 --------------------------------------------
 
-##4.Crosswalk WebView
+## 4.Crosswalk WebView
 
 `Crosswalk WebView`大家都很熟悉了，特别是在低版本android中，`Crosswalk WebView`提供了比原生WebView更好的性能。
 
