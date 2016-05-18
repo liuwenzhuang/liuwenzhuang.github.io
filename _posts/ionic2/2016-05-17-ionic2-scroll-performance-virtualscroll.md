@@ -18,9 +18,9 @@ $ ionic start virtual-scroll tabs --v2 --ts
 
 这里我们使用了Ionic 2提供的tabs模板工程创建我们的工程，我们在一个tab页面中使用`Virtual Scroll`，另一个tab页面中使用普通的方式创建列表，以方便进行对比。
 
-# 创建service提供数据
+# 创建provider提供数据
 
-为演示出使用`Virtual Scroll`的效果，我们刻意将数据量放大，比如3000条数据，这样我们创建一个service提供数据，以便在两个tab页面中都能够使用：
+为演示出使用`Virtual Scroll`的效果，我们刻意将数据量放大，比如3000条数据，这样我们创建一个provider提供数据，以便在两个tab页面中都能够使用：
 
 ~~~ bash
 $ ionic g provider items-provider
@@ -58,7 +58,7 @@ export class ItemsProvider {
 
 上面提到，我们需要使用两个tab页面进行对比，其中一个使用普通的列表，另一个使用`Virtual Scroll`创建列表。这里我们选择tab1（不使用`Virtual Scroll`）和tab2（使用`Virtual Scroll`）进行对比。 首先我们为他们提供数据：
 
-## 引入service：
+## 引入provider：
 
 分别在`app/pages/page1/page1.ts`和`app/pages/page2/page2.ts`头部引入上一步创建的`ItemsProvider`：
 
@@ -66,15 +66,18 @@ export class ItemsProvider {
 import {ItemsProvider} from '../../providers/items-provider/items-provider';
 ~~~
 
-做完这一步还不够，我们还需要在`@Page`修饰器中将`ItemsProvider`作为依赖注入：
+做完这一步还不够，我们还需要将`ItemsProvider`作为依赖注入，但在**进行依赖注入时要注意保证provider的单例性**，即如果我们在所有用到`ItemsProvider`的组件中都将其注入一次，那就会得到`ItemsProvider`的多个实例，破换了其单例性。我们需要在这些组件的父组件中注入provider，对于tab页面来说，其父组件为`app/pages/tabs/tabs.ts`，我们可以在其`@Page`修饰器中注入`ItemsProvider`依赖，不过不要忘记引入：
 
 ~~~ javascript
+import {ItemsProvider} from '../../providers/items-provider/items-provider';
+
+//inject provider once in parent component
 @Page({
     providers: [ItemsProvider]
 })
 ~~~
 
-## 获取数据：
+## 获取数据
 
 分别在`app/pages/page1/page1.ts`和`app/pages/page2/page2.ts`的`ngOnInit()`函数中获取数据：
 
@@ -94,8 +97,7 @@ import {Page} from 'ionic-angular';
 import {ItemsProvider} from '../../providers/items-provider/items-provider';
 
 @Page({
-    templateUrl: 'build/pages/page1/page1.html',
-    providers: [ItemsProvider]
+    templateUrl: 'build/pages/page1/page1.html'
 })
 export class Page1 {
     items: Array<any> = [];
@@ -130,8 +132,8 @@ export class Page1 {
             <ion-avatar item-left>
                 <ion-img [src]="item.avatar"></ion-img>
             </ion-avatar>
-            <h2>{{item.title}}</h2>
-            <p>{{item.content}}</p>
+            {% raw %}<h2>{{item.title}}</h2>
+            <p>{{item.content}}</p>{% endraw %}
         </ion-item>
     </ion-list>
 </ion-content>
@@ -156,8 +158,8 @@ export class Page1 {
             <ion-avatar item-left>
                 <ion-img [src]="item.avatar"></ion-img>
             </ion-avatar>
-            <h2>{{item.title}}</h2>
-            <p>{{item.content}}</p>
+            {% raw %}<h2>{{ item.title }}</h2>
+            <p>{{ item.content }}</p>{% endraw %}
         </ion-item>
     </ion-list>
 </ion-content>
@@ -174,7 +176,7 @@ export class Page1 {
  - 使用`approxItemWidth`和`approxItemHeight`属性能够提升`Virtual Scroll`的性能，不过它们只是近似值，仅作为计算的参考；
  - 数据源变化会造成`Virtual Scroll`的重新构造，非常耗费性能，尽量不要改变数据源；
 
-## `approxItemWidth`和`approxItemHeight`的使用方式
+## approxItemWidth和approxItemHeight的使用方式
 
 `approxItemWidth`是列表项宽度的近似值，可以使用`px`或`%`作为单位，默认值是100%，字符串类型；`approxItemHeight`是列表项高度的近似值，使用`px`作为单位，默认值是40px，字符串类型。使用它们可以提升性能，下面是其使用方式：
 

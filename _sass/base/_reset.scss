@@ -116,6 +116,15 @@ hr {
 
 pre { overflow: auto; }
 
-code, pre {
+code {
+    font-family: 'Lucida Console', 'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+    font-size: 90%;
+}
 
+.highlighter-rouge {
+    padding: 2px 4px;
+    color: #5C707A;
+    background: #F5F6F7;
+    white-space: nowrap;
+    border-radius: 0;
 }

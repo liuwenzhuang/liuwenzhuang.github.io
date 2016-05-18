@@ -70,8 +70,8 @@ $ bower install pouchdb
 ~~~ javascript
 angular.module('starter').factory('BirthdayService', ['$q', BirthdayService]);
 
-function BirthdayService($q) {  
-    var _db;    
+function BirthdayService($q) {
+    var _db;
 
     // We'll need this later.
     var _birthdays;
@@ -102,7 +102,7 @@ function BirthdayService($q) {
 **addBirthday**函数用来向我们的数据库插入一条生日信息：
 
 ~~~ javascript
-function addBirthday(birthday) {  
+function addBirthday(birthday) {
       return $q.when(_db.post(birthday));
 };
 ~~~
@@ -116,7 +116,7 @@ function addBirthday(birthday) {
 ####**updateBirthday**函数
 
 ~~~ javascript
-function updateBirthday(birthday) {  
+function updateBirthday(birthday) {
     return $q.when(_db.put(birthday));
 };
 ~~~
@@ -124,7 +124,7 @@ function updateBirthday(birthday) {
 ####**deleteBirthday**函数
 
 ~~~ javascript
-function deleteBirthday(birthday) {  
+function deleteBirthday(birthday) {
     return $q.when(_db.remove(birthday));
 };
 ~~~
@@ -132,12 +132,12 @@ function deleteBirthday(birthday) {
 ####**getAllBirthdays**函数
 
 ~~~ javascript
-function getAllBirthdays() {  
+function getAllBirthdays() {
     if (!_birthdays) {
        return $q.when(_db.allDocs({ include_docs: true}))
             .then(function(docs) {
 
-                // Each row has a .doc object and we just want to send an 
+                // Each row has a .doc object and we just want to send an
                 // array of birthday objects back to the calling controller,
                 // so let's map the array to contain just the .doc objects.
                 _birthdays = docs.rows.map(function(row) {
@@ -168,7 +168,7 @@ function getAllBirthdays() {
 但是，这就有个问题，要怎样保持_birthdays缓存和数据库内容的同步呢？下面的**onDatabaseChange**函数就是为此而生的：
 
 ~~~ javascript
-function onDatabaseChange(change) {  
+function onDatabaseChange(change) {
     var index = findIndex(_birthdays, change.id);
     var birthday = _birthdays[index];
 
@@ -186,7 +186,7 @@ function onDatabaseChange(change) {
 }
 
 // Binary search, the array is by default sorted by _id.
-function findIndex(array, id) {  
+function findIndex(array, id) {
     var low = 0, high = array.length, mid;
     while (low < high) {
     mid = (low + high) >>> 1;
@@ -213,7 +213,7 @@ PouchDB所有的数据库操作都是异步的，并且使用promise。不幸的
 ~~~ javascript
 angular.module('starter').controller('OverviewController', ['$scope', '$ionicModal', '$ionicPlatform', 'BirthdayService', OverviewController]);
 
-function OverviewController($scope, $ionicModal, $ionicPlatform, birthdayService) {  
+function OverviewController($scope, $ionicModal, $ionicPlatform, birthdayService) {
     var vm = this;
 
     // Initialize the database.
@@ -238,32 +238,32 @@ function OverviewController($scope, $ionicModal, $ionicPlatform, birthdayService
         $scope.birthday = {};
         $scope.action = 'Add';
         $scope.isAdd = true;
-        $scope.modal.show();           
+        $scope.modal.show();
     };
 
     vm.showEditBirthdayModal = function(birthday) {
         $scope.birthday = birthday;
         $scope.action = 'Edit';
-        $scope.isAdd = false;          
+        $scope.isAdd = false;
         $scope.modal.show();
     };
 
     $scope.saveBirthday = function() {
         if ($scope.isAdd) {
-            birthdayService.addBirthday($scope.birthday);              
+            birthdayService.addBirthday($scope.birthday);
         } else {
-            birthdayService.updateBirthday($scope.birthday);               
-        }                       
+            birthdayService.updateBirthday($scope.birthday);
+        }
         $scope.modal.hide();
     };
 
     $scope.deleteBirthday = function() {
-        birthdayService.deleteBirthday($scope.birthday);           
+        birthdayService.deleteBirthday($scope.birthday);
         $scope.modal.hide();
     };
 
     $scope.$on('$destroy', function() {
-        $scope.modal.remove(); 
+        $scope.modal.remove();
     });
 
     return vm;
@@ -273,7 +273,7 @@ function OverviewController($scope, $ionicModal, $ionicPlatform, birthdayService
 最后，在index.html中创建UI，这里我们使用$ionicModal弹出“增加生日”和“编辑生日”的界面:
 
 ~~~ html
-<body ng-app="starter">  
+<body ng-app="starter">
   <ion-pane ng-controller="OverviewController as vm">
     <ion-header-bar class="bar-stable">
       <h1 class="title">Birthdays</h1>
@@ -281,11 +281,11 @@ function OverviewController($scope, $ionicModal, $ionicPlatform, birthdayService
         <button ng-click="vm.showAddBirthdayModal()" class="button button-icon icon ion-plus"></button>
       </div>
     </ion-header-bar>
-    <ion-content>        
+    <ion-content>
       <ion-list>
         <ion-item ng-repeat="b in vm.birthdays" ng-click="vm.showEditBirthdayModal(b)">
-          <div style="float: left">{{ b.Name }}</div>
-          <div style="float: right">{{ b.Date | date:"dd MMMM yyyy" }}</div>
+          <div style="float: left">{% raw %}{{ b.Name }}{% endraw %}</div>
+          <div style="float: right">{% raw %}{{ b.Date | date:"dd MMMM yyyy" }}{% endraw %}</div>
         </ion-item>
       </ion-list>
     </ion-content>
@@ -294,7 +294,7 @@ function OverviewController($scope, $ionicModal, $ionicPlatform, birthdayService
   <script id="add-or-edit-birthday.html" type="text/ng-template">
     <ion-modal-view>
       <ion-header-bar>
-        <h1 class="title">{{ action }} Birthday</h1> 
+        <h1 class="title">{% raw %}{{ action }}{% endraw %} Birthday</h1>
         <div class="buttons">
         <button ng-hide="isAdd" ng-click="deleteBirthday()" class="button button-icon icon ion-trash-a"></button>
         </div>
@@ -313,8 +313,8 @@ function OverviewController($scope, $ionicModal, $ionicPlatform, birthdayService
         </div>
       </ion-content>
     </ion-modal-view>
-  </script> 
-</body> 
+  </script>
+</body>
 ~~~
 
 ### 检查数据库
@@ -334,15 +334,15 @@ $ ionic serve --lab
 注意，当你在桌面浏览器上测试此app时，PouchDB使用IndexDB adapter或WebSQL adapter，具体使用哪个取决于你的浏览器，可以使用如下方式获知使用的是那个adapter:
 
 ~~~ javascript
-var db = new PouchDB('birthdays');  
-console.log(db.adapter); 
+var db = new PouchDB('birthdays');
+console.log(db.adapter);
 ~~~
 
 在手机上测试时，即使使用SQLite，上面的代码可能返回结果也是websql，为了证实使用的确实是SQLite，需要使用如下代码（[StackOverflow问答][pouchdb-question]）：
 
 ~~~ javascript
-var db = new PouchDB('birthdays');  
-db.info().then(console.log.bind(console));  
+var db = new PouchDB('birthdays');
+db.info().then(console.log.bind(console));
 ~~~
 
 这段代码会返回一个对象，其中**sqlite_plugin**属性为true或false。
@@ -350,7 +350,7 @@ db.info().then(console.log.bind(console));
 ### 删除数据库
 
 ~~~ javascript
-var db = new PouchDB('birthdays');  
+var db = new PouchDB('birthdays');
 db.destroy().then(function() { console.log('ALL YOUR BASE ARE BELONG TO US') });
 ~~~
 
