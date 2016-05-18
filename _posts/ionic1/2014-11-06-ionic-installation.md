@@ -79,3 +79,9 @@ $ ionic start myapp [template]
 --id, -i  ............  包名，如com.mycompany.myapp
 --no-cordova, -w  ....  不要以cordova的方式创建工程
 ~~~
+
+> 参考文档：<br>
+> [Ionic 2环境搭建]({% post_url 2016-02-14-ionic2-installation %})<br>
+> [Ionic官方文档之CLI][ionic-cli-doc]<br>
+
+[ionic-cli-doc]: http://ionicframework.com/docs/cli/

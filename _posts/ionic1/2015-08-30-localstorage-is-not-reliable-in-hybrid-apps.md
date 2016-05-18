@@ -1,6 +1,6 @@
 ---
 title: "localStorage在混合应用中是不可靠的"
-date: 2015-11-01 22:30:02
+date: 2015-08-30 22:30:02
 tag: ionic1
 ---
 [original-doc]: http://gonehybrid.com/dont-assume-localstorage-will-always-work-in-your-hybrid-app/
@@ -38,4 +38,4 @@ IOS 8，当系统内存不足时，localStorage可能会被清除，就像ionic�
 
 ## 替代方案
 
-在hybrid app中，如果需要兼顾体验感和持久化存储，那么可以使用SQLite数据库。一种方案是使用PouchDB，一个开源的JavaScript框架，PouchDB封装了WebSQL, IndexedDB和SQLite。如果想了解如何使用PouchDB，可以查看我的另一篇[译文]()。另一种解决方案是使用LokiJS，LokiJS是一个快速的内存数据库，如果想了解如何使用LokiJS，可以查看我的另一篇译文[ionic怎样使用LokiJS作为本地存储](http://blog.csdn.net/u010730126/article/details/49535383)。
+在hybrid app中，如果需要兼顾体验感和持久化存储，那么可以使用SQLite数据库。一种方案是使用PouchDB，一个开源的JavaScript框架，PouchDB封装了WebSQL, IndexedDB和SQLite。如果想了解如何使用PouchDB，可以查看我的另一篇[译文]({% post_url 2015-11-03-ionic-PouchDB-SQLite %})。另一种解决方案是使用LokiJS，LokiJS是一个快速的内存数据库，如果想了解如何使用LokiJS，可以查看我的另一篇译文[ionic App使用LokiJS作为本地存储]({% post_url 2015-09-11-ionic-LokiJS %})。

@@ -5,7 +5,6 @@ tag: ionic1
 ---
 [original-doc]: http://gonehybrid.com/how-to-use-pouchdb-sqlite-for-local-storage-in-your-ionic-app/
 [source-code]: https://github.com/ashteya/ionic-tutorial-pouchdb
-[ionic-use-LokiJS]: http://blog.csdn.net/u010730126/article/details/49535383
 [apache-couchdb]: http://couchdb.apache.org/
 [sqlite-plugin]: https://github.com/litehelpers/Cordova-sqlite-storage
 [pouchdb]: http://pouchdb.com/
@@ -19,7 +18,7 @@ tag: ionic1
 
 随着继续深入了解，在ionic app的开发中使用PouchDB要比SQLite拥有更好的性能，开发也更加容易，即使只是用PouchDB作为本地存储。
 
-注：也可以使用LokiJS代替PouchDB，详情可参考我的另外一篇译文[ionic怎样使用LokiJS作为本地存储][ionic-use-LokiJS]。
+注：也可以使用LokiJS代替PouchDB，详情可参考我的另外一篇译文[ionic怎样使用LokiJS作为本地存储]({% post_url 2015-09-11-ionic-LokiJS %})。
 
 本篇文章的[源码][source-code]可在Github上找到。
 
