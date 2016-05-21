@@ -7,6 +7,3 @@ menus:
 
   - name: IONIC2
     url: "/ionic2/"
-
-  - name: ABOUT
-    url: "/about/"
