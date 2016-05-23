@@ -34,8 +34,9 @@ registerBackButtonAction(callback, priority, [actionId])
 
 ~~~ javascript
 //do not forget add $ionicPlatform, $state, $ionicHistory as dependency
-var deregister = $ionicPlatform.ready(function () {
-    $ionicPlatform.registerBackButtonAction(function (e) {
+var deregister;
+$ionicPlatform.ready(function () {
+    deregister = $ionicPlatform.registerBackButtonAction(function (e) {
         if ($state.includes('CHILD_STATE')) {
             $state.go('PARENT_STATE');
         } else {
@@ -59,7 +60,7 @@ var deregister = $ionicPlatform.ready(function () {
 // do not forget add $scope, $ionicPlatform as dependency
 var deregister;
 $scope.$on('$ionicView.beforeEnter', function () {
-    deregister = $ionicPlatform.ready(function () {
+    deregister = $ionicPlatform.registerBackButtonAction(function (e) {
         //suit yourself
     });
 });
