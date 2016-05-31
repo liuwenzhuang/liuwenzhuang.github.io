@@ -1,7 +1,9 @@
 ---
-title: "localStorage在混合应用中是不可靠的"
+title: "localStorage在混合移动应用中是不可靠的"
 date: 2015-08-30 22:30:02
 tag: ionic1
+keywords: H5, localStorage, Ionic 1本地存储, 本地存储被清除, 混合开发移动应用
+excerpt: 在Cordova/PhoneGap app中有多种本地存储数据的方式，当然本文介绍的是Ionic 1应用了，而最常用的无疑是localStorage，localStorage提供了一种存储键值对数据的方案，并且存储容量扩充到了5M，可以满足很多存储需求了。在H5中，对localStorage的定义是除非手动删除，否则永久存在，但是在混合移动应用中真的是这样吗？答案是否定的，localStorage在移动设备可能因为内存不足等原因被清除。
 ---
 [original-doc]: http://gonehybrid.com/dont-assume-localstorage-will-always-work-in-your-hybrid-app/
 注：本文乃翻译而来，如有错误之处，请大家多多指正，大家也可挪步[原文][original-doc]。
@@ -10,14 +12,14 @@ tag: ionic1
 
 ~~~ javascript
 // simple example
-localStorage.setItem('name', 'Pinky');  
-var name = localStorage.getItem('name');  
+localStorage.setItem('name', 'Pinky');
+var name = localStorage.getItem('name');
 console.log(name);
 
 // complex example
-var records = [{ name: 'Pinky', age: 1 }, { name: 'Brain', age: 2 }];  
-localStorage.setItem('records', JSON.stringify(records));  
-var output = JSON.parse(localStorage.getItem('records'));  
+var records = [{ name: 'Pinky', age: 1 }, { name: 'Brain', age: 2 }];
+localStorage.setItem('records', JSON.stringify(records));
+var output = JSON.parse(localStorage.getItem('records'));
 console.table(output);
 ~~~
 

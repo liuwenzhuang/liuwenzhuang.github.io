@@ -1,8 +1,11 @@
 # Site settings
-title: Newbie's Blogs
+title: Ionic 1 | Ionic 2 | Angular 1 | Angular 2 初学者学习笔记
 email: liu1114589929@gmail.com
 description: >
-  Ionic1及Ionic2学习笔记，记录从学习初期跟着文档亦步亦趋的时期，记录从学习中期跟着诸多大神学习扩展的时期，记录现在半斤八两的迷茫与惆怅。现在依然跟着大神在走，不时记录两笔，不值一提，仅作为笔记吧。
+  Ionic 1(Angular 1)及Ionic 2(Angular 2)学习笔记，记录从学习初期跟着文档亦步亦趋的时期，记录从学习中期跟着诸多大神学习扩展的时期，记录现在半斤八两的迷茫与惆怅。现在依然跟着大神在走，不时记录两笔，不值一提，仅作为笔记吧。适用于Ionic 1(Angular 1)及Ionic 2(Angular 2)的初学者，
+  欢迎大家探讨交流。
+keywords: >
+  Ionic 1, Angular 1, Ionic 2, Angular 2, Cordova, Mobile Hybrid App, 混合开发移动App, 学习笔记
 baseurl: ""
 url: ""
 urlPrefix: http://liuwenzhuang.github.io
