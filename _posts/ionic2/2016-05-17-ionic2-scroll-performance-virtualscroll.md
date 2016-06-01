@@ -2,6 +2,8 @@
 title: 'Ionic 2神器之VirtualScroll'
 date: 2016-05-17 17:32:00
 tag: ionic2
+keywords: Ionic 2 List控件, Virtual Scroll, Ionic 2工程搭建, List控件处理大数据
+excerpt: 手机应用中，List控件必不可少，而对于List控件，最重要的是其滑动的效果如何。尤其是对于混合开发来说，对List的优化尤显重要。使用过Ionic 1的开发者应该都有如下体会：当`<ion-list></ion-list>`中包含了大量的`<ion-item></ion-item>`时，滚动的卡顿效果尤其明显。而Ionic 2为我们提供了VirtualScroll改善此问题。
 ---
 [virtual-scoll]: http://ionicframework.com/docs/v2/api/components/virtual-scroll/VirtualScroll/
 手机应用中，List控件必不可少，而对于List控件，最重要的是其滑动的效果如何。尤其是对于混合开发来说，本来性能就不如原生应用，对List的优化尤显重要。使用过Ionic 1的开发者应该都有如下体会：当`<ion-list></ion-list>`中包含了大量的`<ion-item></ion-item>`时，滚动的卡顿效果尤其明显。

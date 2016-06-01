@@ -2,6 +2,8 @@
 title: 'Ionic App修改特定页面路由规则'
 date: 2016-01-13 17:45:03
 tag: ionic1
+keywords: Ionic修改路由规则, Ionic修改返回键事件, Ionic应用生命周期, 应用历史堆栈, AngularUI Router
+excerpt: Ionic 1应用使用AngularUI Router管理应用内的页面跳转关系，其默认的跳转的规则能够满足我们大部分的需求，但用户的需求总是各式各样的，需要开发者有能力随机应变，本文介绍了Ionic修改默认的页面跳转规则，分为对硬件返回键的处理以及对页面返回按钮的处理，使得页面跳转能够按照我们的特殊需求进行。
 ---
 [angular-ui-router]: https://github.com/angular-ui/ui-router/wiki
 Ionic使用[AngularUI Router][angular-ui-router]管理应用内页面的跳转关系，将每个页面定义为一个

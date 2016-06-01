@@ -2,6 +2,8 @@
 title: 'ionic app中使用PouchDB+SQLite作为本地存储'
 date: 2015-11-03 19:38
 tag: ionic1
+keywords: Ionic本地存储被清除, cordova SQLite插件, Ionic使用PouchDB作为本地存储, Ionic工程使用数据库, 混合开发移动应用, NO SQL数据库
+excerpt: H5的新特性之一localStroage在混合移动开发中并不可靠，在移动设备上可能会因为内存不足等原因被清除。而且我们混合开发中数据库的使用比较繁琐，而且效率不高，所以一般的应用中我们可以使用LokiJS或者PouchDB作为本地存储，PouchDB最好的特性是能够同步本地与服务器的数据，如果不需要同步数据，也可以使用LokiJS作为本地存储。
 ---
 [original-doc]: http://gonehybrid.com/how-to-use-pouchdb-sqlite-for-local-storage-in-your-ionic-app/
 [source-code]: https://github.com/ashteya/ionic-tutorial-pouchdb

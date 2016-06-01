@@ -2,6 +2,8 @@
 title: 'ionic代码压缩与代码混淆'
 date: 2015-11-30 17:06:03
 tag: ionic1
+keywords: Ionic应用发布, Ionic代码压缩, Ionic代码混淆, 代码压缩与代码混淆, cordova hook和gulp在Ionic应用中的使用
+excerpt: 开发应用的最后一步总是需要进行代码压缩和代码混淆，当然Ionic应用也不例外，代码压缩可以在一定程度上优化我们应用的性能，而代码混淆可以在一定程度上保护我们辛苦完成的代码。本文介绍了Ionic应用发布之前的最后一步，即进行代码压缩与代码混淆，其中需要使用gulp构建工具以及cordova为我们提供的cordova hook体系。
 ---
 [original-doc]: https://www.airpair.com/ionic-framework/posts/production-ready-apps-with-ionic-framework
 [010_jshint]: https://gist.github.com/agustinhaller/5e489e5419e43b11d7b7
@@ -11,14 +13,14 @@ tag: ionic1
 本文为译文，并加入个人理解部分，如有理解错误指出，请大家指出，大家也可移步[原文][original-doc]。
 
 本文解释了ionic工程发布之前的最后一步，即代码压缩（获取更好的性能）以及代码混淆（以免源码被有心者轻易获取）。包括以下步骤：
- 
+
 
  - （cordova hook）`检查javascript`：这一步需要在代码压缩和代码混淆之前进行以保证javascript代码无错误
  - （gulp task）`将html页面代码转换为angular的JS代码`：这一步起到了混淆html页面代码的作用
  - （gulp task）`启用angular严格依赖注入`：这一步需要在代码混淆之前进行以保证angular的依赖注入没有问题
  - （gulp task）`组合js代码以及组合css代码`：这一步起到了混淆js代码以及css代码的作用
- - （cordova hook）`代码丑化、压缩、混淆`：最后一步 - 
- 
+ - （cordova hook）`代码丑化、压缩、混淆`：最后一步 -
+
 为完成上述任务，我们需要同时使用*gulp tasks*以及*cordova hooks*。当执行`ionic serve`时，*gulp tasks*会被执行。当执行`ionic build android/ios`或`ionic run android/ios`时，*cordova hooks*会被执行。
 
 
@@ -250,8 +252,8 @@ var ngAnnotate = require('gulp-ng-annotate');
 
 ~~~ javascript
 var paths = {
-    sass: ['./scss/**/*.scss'],  
-    templatecache: ['./www/templates/**/*.html'],  
+    sass: ['./scss/**/*.scss'],
+    templatecache: ['./www/templates/**/*.html'],
     ng_annotate: ['./www/js/*.js']
 };
 ~~~
@@ -291,9 +293,9 @@ gulp.task('watch', function() {
 ### 4.重新定位index.html里js的文件：
 
 ~~~ html
-<script src="dist/dist_js/app/app.js"></script>  
-<script src="dist/dist_js/app/controllers.js"></script>  
-<script src="dist/dist_js/app/services.js"></script>  
+<script src="dist/dist_js/app/app.js"></script>
+<script src="dist/dist_js/app/controllers.js"></script>
+<script src="dist/dist_js/app/services.js"></script>
 <script src="dist/dist_js/app/templates.js"></script>
 ~~~
 
@@ -336,9 +338,9 @@ var useref = require('gulp-useref');
 
 ~~~ javascript
 var paths = {
-    sass: ['./scss/**/*.scss'],  
-	templatecache: ['./www/templates/**/*.html'],  
-    ng_annotate: ['./www/js/*.js'],  
+    sass: ['./scss/**/*.scss'],
+	templatecache: ['./www/templates/**/*.html'],
+    ng_annotate: ['./www/js/*.js'],
     useref: ['./www/*.html']
 };
 ~~~
@@ -389,12 +391,12 @@ gulp.task('watch', function() {
 ~~~
 
 ~~~ html
-<!-- build:js dist_js/app.js -->  
-<script src="dist/dist_js/app/app.js"></script>  
-<script src="dist/dist_js/app/controllers.js"></script>  
-<script src="dist/dist_js/app/services.js"></script>  
-<script src="dist/dist_js/app/templates.js"></script>  
-<!-- endbuild --> 
+<!-- build:js dist_js/app.js -->
+<script src="dist/dist_js/app/app.js"></script>
+<script src="dist/dist_js/app/controllers.js"></script>
+<script src="dist/dist_js/app/services.js"></script>
+<script src="dist/dist_js/app/templates.js"></script>
+<!-- endbuild -->
 ~~~
 
 注意：其中使用成对注释符包裹的部分会被进行合并处理，可能有些外部的css文件或js文件不想被处理，那么就保持原状即可（不使用此种方式包裹）。

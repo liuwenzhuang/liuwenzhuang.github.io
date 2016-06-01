@@ -2,6 +2,8 @@
 title:  "Ionic单元测试"
 date:   2016-04-07 12:11:21
 tag: ionic1
+keywords: Ionic单元测试, 前端测试, karma, jasmine, phantomjs
+excerpt: 代码测试的必要性，对任何编程语言都毋需赘述，JavaScript和HTML自然不例外。本文描述如何对Ionic 1应用进行单元测试（Unit Tests），既然是单元测试，自然需要搭建测试环境和编写测试用例，大家可以随意选择，本文使用为Angular定制的Karma作为测试环境，并使用Jasmine编写测试用例。
 ---
 [karma-docs]: https://karma-runner.github.io
 [Jasmine-docs]: http://jasmine.github.io/
@@ -107,7 +109,7 @@ files: [
         var scopeMock,
             ChatsServiceMock,
             controller;
-            
+
         beforeEach(module('starter'));
         beforeEach(inject(function ($rootScope, $controller, _ChatsService_) {
             scopeMock = $rootScope.$new();

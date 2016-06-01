@@ -2,6 +2,8 @@
 title: 'Ionic 2环境搭建'
 date: 2016-02-14 19:23:45
 tag: ionic2
+keywords: Cordova, Ionic CLI, Ionic 2环境搭建, Ionic 2创建工程
+excerpt: 环境搭建是开发的第一步，像Hello World之于C语言，环境搭建完成后总是要实验一下环境是否工作正常。本文讲述使用Ionic 2开发的第一步，即配置开发环境和测试开发环境，包括cordova、ionic的安装，安装过程中可能出现的问题。还简单介绍了一下Ionic CLI的使用方法和使用过程。如果之前使用过Ionic 1开发，那么基础环境已经配置完成了，只需要升级一下Ionic即可。
 ---
 [NodeJS]: https://nodejs.org/en/
 [tabs-template]: https://github.com/driftyco/ionic2-starter-tabs
