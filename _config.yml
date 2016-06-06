@@ -1,11 +1,10 @@
 # Site settings
-title: Ionic 1 | Ionic 2 | Angular 1 | Angular 2 初学者学习笔记
+title: Ionic和Angular开发移动App笔记
 email: liu1114589929@gmail.com
 description: >
-  Ionic 1(Angular 1)及Ionic 2(Angular 2)学习笔记，记录从学习初期跟着文档亦步亦趋的时期，记录从学习中期跟着诸多大神学习扩展的时期，记录现在半斤八两的迷茫与惆怅。现在依然跟着大神在走，不时记录两笔，不值一提，仅作为笔记吧。适用于Ionic 1(Angular 1)及Ionic 2(Angular 2)的初学者，
-  欢迎大家探讨交流。
+  技术的变化是必然的，前端的技术变革尤其迅速，现在的手机App一般需要开发三端，即Android、iOS和微信端，这就意味着一个产品需要三个团队来做，这就意味着开发成本的提升，而Ionic和AngularJS为我们带来了一揽子解决方案的可能，使用Ionic和AngularJS等前端技术开发出的App也越来越贴近原生App了，这其中不仅仅是样子像，而且性能上也越来越靠近。特别是Ionic 1到Ionic 2的转变，其背后是Angular 1向Angular 2的转变，都意味着性能的提升，开发的方便。
 keywords: >
-  Ionic 1, Angular 1, Ionic 2, Angular 2, Cordova, Mobile Hybrid App, 混合开发移动App, 学习笔记
+  Ionic 1, Angular 1, Ionic 2, Angular 2, Cordova, 混合移动App开发框架, 前端开发, AngularJS, 使用Ionic和Angular等前端技术开发手机App, Android开发, iOS开发, 微信开发
 baseurl: ""
 url: ""
 urlPrefix: http://liuwenzhuang.github.io

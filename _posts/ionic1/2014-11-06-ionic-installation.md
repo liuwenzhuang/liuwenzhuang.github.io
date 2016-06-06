@@ -2,7 +2,7 @@
 title: 'ionic环境搭建, ionic、cordova和Ionic CLI的基本使用方法'
 date: 2014-11-06 22:30
 tag: ionic1
-keywords: Cordova, Ionic CLI, Ionic环境搭建, Ionic 1创建工程
+keywords: Cordova, Ionic CLI, Ionic环境搭建, Ionic 1创建工程, 混合移动App开发框架, 前端开发, AngularJS, 使用Ionic和Angular等前端技术开发手机App, Android开发, iOS开发, 微信开发
 excerpt: 环境搭建是开发的第一步，像Hello World之于C语言，环境搭建完成后总是要实验一下环境是否工作正常。本文讲述使用Ionic 1开发的第一步，即配置开发环境和测试开发环境，包括cordova、ionic的安装，安装过程中可能出现的问题。还简单介绍了一下Ionic CLI的使用方法和使用过程。
 ---
 本文讲述使用ionic开发应用的第一步：安装与创建工程，ionic提供了非常强大的CLI命令帮助我们更快更好地创建工程、修改工程、测试工程。
