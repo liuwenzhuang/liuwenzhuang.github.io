@@ -9,8 +9,8 @@ excerpt: 技术的变化是必然的，前端的技术变革尤其迅速，特�
     {% if modulo == '0' or forloop.first %}
     <div class="row responsive-sm row-bottom">
     {% endif %}
-        <div class="col">
-            <div class="list card" style="width:320px;height:auto">
+        <div class="col col-33">
+            <div class="list card" style="height:auto;margin-bottom:5px;">
                 <div class="item">
                     <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
                     <p>{{ post.date | date: "%b %-d, %Y" }}</p>
