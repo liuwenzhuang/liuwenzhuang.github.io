@@ -26,8 +26,9 @@ exclude: [_site]
 sass:
   style: compressed #minify css
 
-#paginate: 10
-#gems: [jekyll-paginate]
+paginate: 9
+paginate_path: "/blog/page:num/"
+gems: [jekyll-paginate]
 
 defaults:
   -

@@ -1,0 +1,54 @@
+---
+layout: page
+title: 欢迎来到Ionic初学者笔记
+keywords: Ionic初学笔记, 前言, 序文, Ionic, Angular, 技术更新
+excerpt: 技术的变化是必然的，前端的技术变革尤其迅速，特别是在移动App的浪潮下，前端技术开发出的App也越来越贴近原生App了，这其中不仅仅是样子像，而且性能上也越来越靠近。特别是Ionic 1到Ionic 2的转变，其背后是Angular 1向Angular 2的转变，都意味着性能的提升，开发的方便。但也意味着开发曲线的存在，刚开始接触Ionic 2和Angular 2可能会有些不习惯，但学习下去克服困难之后，会有满满的成就感。在此与君共勉。
+---
+{% for post in paginator.posts %}
+    {% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
+    {% if modulo == '0' or forloop.first %}
+    <div class="row responsive-sm row-bottom">
+    {% endif %}
+        <div class="col">
+            <div class="list card" style="width:320px;height:auto">
+                <div class="item">
+                    <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                    <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+                </div>
+                <div class="item item-body">
+                    <p>{{ post.excerpt | truncate: 160 }}</p>
+                </div>
+            </div>
+        </div>
+    {% if modulo == '2' or forloop.last %}
+    </div>
+    {% endif %}
+{% endfor %}
+
+
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination" style="text-align:center;">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}

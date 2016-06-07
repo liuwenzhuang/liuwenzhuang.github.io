@@ -136,8 +136,9 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-paginate
   nokogiri (~> 1.6.8.rc2)
   wdm (>= 0.1.0)
 
 BUNDLED WITH
-   1.12.4
+   1.12.5

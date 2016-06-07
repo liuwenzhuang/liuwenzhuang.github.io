@@ -28,3 +28,128 @@ $c__white: #ffffff;
 
 // Theme
 $t-theme: $c__indigo;
+
+// Base
+$content-padding:                 10px !default;
+$z-index-item-edit:               0 !default;
+$z-index-item-reorder:            3 !default;
+$z-index-item-reordering:         9 !default;
+$z-index-item-options:            1 !default;
+
+// Grids
+$grid-padding-width:              10px !default;
+$grid-responsive-sm-break:        567px !default;  // smaller than landscape phone
+$grid-responsive-md-break:        767px !default;  // smaller than portrait tablet
+$grid-responsive-lg-break:        1023px !default; // smaller than landscape tablet
+
+// Buttons
+$button-border-width:             1px !default;
+
+// Items
+$item-border-width:               1px !default;
+$z-index-item:                    2 !default;
+$item-padding:                    16px !default;
+$item-font-size:                  16px !default;
+
+$item-icon-font-size:             32px !default;
+$item-icon-fill-font-size:        28px !default;
+$item-icon-accessory-color:       #ccc !default;
+$item-icon-accessory-font-size:   16px !default;
+
+$item-button-line-height:         32px !default;
+$item-button-font-size:           18px !default;
+
+$item-avatar-width:               40px !default;
+$item-avatar-height:              40px !default;
+$item-avatar-border-radius:       50% !default;
+
+$item-thumbnail-width:            80px !default;
+$item-thumbnail-height:           80px !default;
+$item-thumbnail-margin:           10px !default;
+
+$item-divider-bg:                 #f5f5f5 !default;
+$item-divider-color:              #222 !default;
+$item-divider-padding:            5px 15px !default;
+
+$item-default-bg:                 #fff !default;
+$item-default-border:             #ddd !default;
+$item-default-text:               #444 !default;
+$item-default-active-bg:          #D9D9D9 !default;
+$item-default-active-border:      #ccc !default;
+$item-light-bg:                   #fff !default;
+$item-light-border:               #ddd !default;
+$item-light-text:                 #444 !default;
+$item-light-active-bg:            #fafafa !default;
+$item-light-active-border:        #ccc !default;
+$item-stable-bg:                  #f8f8f8 !default;
+$item-stable-border:              #b2b2b2 !default;
+$item-stable-text:                #444 !default;
+$item-stable-active-bg:           #e5e5e5 !default;
+$item-stable-active-border:       #a2a2a2 !default;
+$item-positive-bg:                #387ef5 !default;
+$item-positive-border:            darken(#387ef5, 10%) !default;
+$item-positive-text:              #fff !default;
+$item-positive-active-bg:         darken(#387ef5, 10%) !default;
+$item-positive-active-border:     darken(#387ef5, 10%) !default;
+$item-calm-bg:                    #11c1f3 !default;
+$item-calm-border:                darken(#11c1f3, 10%) !default;
+$item-calm-text:                  #fff !default;
+$item-calm-active-bg:             darken(#11c1f3, 10%) !default;
+$item-calm-active-border:         darken(#11c1f3, 10%) !default;
+$item-assertive-bg:               #ef473a !default;
+$item-assertive-border:           darken(#ef473a, 10%) !default;
+$item-assertive-text:             #fff !default;
+$item-assertive-active-bg:        darken(#ef473a, 10%) !default;
+$item-assertive-active-border:    darken(#ef473a, 10%) !default;
+$item-balanced-bg:                #33cd5f !default;
+$item-balanced-border:            darken(#33cd5f, 10%) !default;
+$item-balanced-text:              #fff !default;
+$item-balanced-active-bg:         darken(#33cd5f, 10%) !default;
+$item-balanced-active-border:     darken(#33cd5f, 10%) !default;
+$item-energized-bg:               #ffc900 !default;
+$item-energized-border:           darken(#ffc900, 5%) !default;
+$item-energized-text:             #fff !default;
+$item-energized-active-bg:        darken(#ffc900, 5%) !default;
+$item-energized-active-border:    darken(#ffc900, 5%) !default;
+$item-royal-bg:                   #886aea !default;
+$item-royal-border:               darken(#886aea, 8%) !default;
+$item-royal-text:                 #fff !default;
+$item-royal-active-bg:            darken(#886aea, 8%) !default;
+$item-royal-active-border:        darken(#886aea, 8%) !default;
+$item-dark-bg:                    #444 !default;
+$item-dark-border:                #111 !default;
+$item-dark-text:                  #fff !default;
+$item-dark-active-bg:             #262626 !default;
+$item-dark-active-border:         #000 !default;
+
+// Item Editing
+// -------------------------------
+
+$item-edit-transition-duration:   250ms !default;
+$item-edit-transition-function:   ease-in-out !default;
+
+$item-remove-transition-duration:   300ms !default;
+$item-remove-transition-function:   ease-in !default;
+$item-remove-descendents-transition-function:  cubic-bezier(.25,.81,.24,1) !default;
+
+$item-left-edit-left:             8px !default;  // item's left side edit's "left" property
+
+$item-right-edit-open-width:      50px !default;
+$item-left-edit-open-width:       50px !default;
+
+$item-delete-icon-size:           24px !default;
+$item-delete-icon-color:          #ef473a !default;
+
+$item-reorder-icon-size:          32px !default;
+$item-reorder-icon-color:         #444 !default;
+
+// Lists
+$list-header-margin-top:          20px !default;
+$list-header-padding:             5px 15px !default;
+$list-header-bg:                  transparent !default;
+$list-header-color:               #222 !default;
+
+// Cards
+$card-border-radius:              2px !default;
+$card-body-bg:                    #fff !default;
+$card-box-shadow:                 0 1px 3px rgba(0, 0, 0, .3) !default;
