@@ -11,12 +11,13 @@ excerpt: 技术的变化是必然的，前端的技术变革尤其迅速，特�
     {% endif %}
         <div class="col col-33">
             <div class="list card" style="height:auto;margin-bottom:5px;">
-                <div class="item">
-                    <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                <div class="item item-thumbnail-left" onclick="location.href='{{ post.url | prepend: site.baseurl }}';" style="cursor:pointer;">
+                    <img src="{% if post.thumbnail %}/assets/images/thumbnail/{{ post.thumbnail }}{% else %}{% if post.tag == 'ionic2' %}/assets/images/thumbnail/ionic2_logo.png{% else %}/assets/images/thumbnail/ionic1_logo.png{% endif %}{% endif %}" alt="{% if post.thumbnail_alt %}{{post.thumbnail_alt}}{% else %}{{post.keywords}}{% endif %}">
+                    <h2 style="white-space:normal;"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
                     <p>{{ post.date | date: "%b %-d, %Y" }}</p>
                 </div>
                 <div class="item item-body">
-                    <p>{{ post.excerpt | truncate: 160 }}</p>
+                    <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
                 </div>
             </div>
         </div>
@@ -25,14 +26,12 @@ excerpt: 技术的变化是必然的，前端的技术变革尤其迅速，特�
     {% endif %}
 {% endfor %}
 
-
-
 {% if paginator.total_pages > 1 %}
 <div class="pagination" style="text-align:center;">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; 上一页</a>
   {% else %}
-    <span>&laquo; Prev</span>
+    <span>&laquo; 上一页</span>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
@@ -46,9 +45,9 @@ excerpt: 技术的变化是必然的，前端的技术变革尤其迅速，特�
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &raquo;</a>
   {% else %}
-    <span>Next &raquo;</span>
+    <span>下一页 &raquo;</span>
   {% endif %}
 </div>
 {% endif %}

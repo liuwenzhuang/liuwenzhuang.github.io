@@ -2,6 +2,8 @@
 title: 'ionic工程文件组织结构'
 date: 2015-09-05 20:30:03
 tag: ionic1
+thumbnail: 'project_structure.jpg'
+thumbnail_alt: 'ionic工程文件组织结构'
 keywords: Ionic Project, Project Structures, Ionic 1工程文件结构, 工程组织形式, 混合开发移动应用
 excerpt: Ionic 1默认的工程文件组织形式不敢恭维，默认状态下按照文件的类型来组织工程文件，即html文件放在一个文件夹内，js文件放在另一个文件夹内，图片文件再找个文件夹放置，这样的工程文件的组织形式仅适用于小工程。当工程较大时，这种按照类型组织文件的形式已经不适用了，既不利于维护，也不利于测试。本文就介绍一种按照“特性”组织文件的形式，即将不同类型的文件按照其功能放置在不同的文件夹内，使得寻找相关文件尤其便捷。
 ---
