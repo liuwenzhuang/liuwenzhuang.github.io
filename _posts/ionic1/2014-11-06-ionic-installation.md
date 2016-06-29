@@ -87,5 +87,7 @@ $ ionic start myapp [template]
 > 参考文档：<br>
 > [Ionic 2环境搭建]({% post_url 2016-02-14-ionic2-installation %})<br>
 > [Ionic官方文档之CLI][ionic-cli-doc]<br>
+> [Ionic工程文件组织结构]({% post_url 2015-09-05-ionic-project-structure-origranization %})<br>
+> [Ionic代码压缩与代码混淆]({% post_url 2015-11-30-ionic-minify-obfuscation %})
 
 [ionic-cli-doc]: http://ionicframework.com/docs/cli/

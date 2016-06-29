@@ -100,7 +100,7 @@ function BirthdayService($q) {
 
 可以看到，上面的代码只实现了**initDB**函数，下面实现其他功能函数：
 
-####**addBirthday**函数
+#### **addBirthday**函数
 
 **addBirthday**函数用来向我们的数据库插入一条生日信息：
 
@@ -116,7 +116,7 @@ function addBirthday(birthday) {
 
 看到这，大家可能有些疑惑，为什么要将_db.post封装到$q的promise中。我会在下文解释。
 
-####**updateBirthday**函数
+#### **updateBirthday**函数
 
 ~~~ javascript
 function updateBirthday(birthday) {
@@ -124,7 +124,7 @@ function updateBirthday(birthday) {
 };
 ~~~
 
-####**deleteBirthday**函数
+#### **deleteBirthday**函数
 
 ~~~ javascript
 function deleteBirthday(birthday) {
@@ -132,7 +132,7 @@ function deleteBirthday(birthday) {
 };
 ~~~
 
-####**getAllBirthdays**函数
+#### **getAllBirthdays**函数
 
 ~~~ javascript
 function getAllBirthdays() {
@@ -362,3 +362,7 @@ db.destroy().then(function() { console.log('ALL YOUR BASE ARE BELONG TO US') });
 ### 结语
 
 可以看出，使用PouchDB还是很方便的，功能也很强大。
+
+> 参考文档：<br>
+> [localStorage在混合移动应用中是不可靠的]({% post_url 2015-08-30-localstorage-is-not-reliable-in-hybrid-apps %})<br>
+> [ionic App使用LokiJS作为本地存储]({% post_url 2015-09-11-ionic-LokiJS %})

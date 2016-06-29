@@ -108,15 +108,19 @@ request: function(config) {
 
 ## 使用用例
 
-为演示Angular $http拦截器的使用方法，下面通过几个常用的用例来说明：
+为演示Angular **$http拦截器**的使用方法，下面通过几个常用的用例来说明：
 
-### 利用**request拦截器**实现Angular的XSRF(即CSRF)防御
+### 利用**request拦截器**模拟实现Angular的XSRF(即CSRF)防御
 
-CSRF，即“跨站请求伪造”，不过不知道为什么Angular将其称为XSRF。当处理与后台交互时，Angular的$http会尝试从客户端cookie中读取一个token，其默认的key为`XSRF-TOKEN`，并构造一个名为`X-XSRF-TOKEN`的http头部，与http请求一起发送到后台。Server端就可以根据此token识别出请求来源于同域，当然跨域的请求$http不会加入`X-XSRF-TOKEN`头部。那我们可以利用**request拦截器**通过如下方式在同域请求头部中加入此头部：
+CSRF，即“跨站请求伪造”，不过不知道为什么Angular将其称为XSRF。当处理与后台交互时，Angular的$http会尝试从客户端cookie中读取一个token，其默认的key为`XSRF-TOKEN`，并构造一个名为`X-XSRF-TOKEN`的http头部，与http请求一起发送到后台。Server端就可以根据此token识别出请求来源于同域，当然跨域的请求$http不会加入`X-XSRF-TOKEN`头部。那我们可以利用**request拦截器**通过如下方式在同域请求头部中加入此头部以达到模拟Angular的XSRF(即CSRF)防御机制的实现效果：
 
 ~~~ javascript
+/**
+* 正式开发中Angular会主动进行XSRF防御（只要cookie中存在key为`XSRF-TOKEN`的token），
+* 一般不需要手动进行，除非cookie中不存在key为`XSRF-TOKEN`的token，这里只是模拟实现
+*/
 request: function(config) {
-  if(config.url.indexOf('SAME_DOMAIN_API_URL') > -1) {
+  if(config.url.indexOf('SAME_DOMAIN_API_URL') > -1 && $cookies.get('XSRF-TOKEN')) {
     config.headers['X-XSRF-TOKEN'] = $cookies.get('XSRF-TOKEN');
   }
   return config;
@@ -131,7 +135,7 @@ request: function(config) {
 }
 ~~~
 
-那么经过上述的拦截器后，其http请求头部就变成了：
+那么经过上述的**拦截器**后，其http请求头部就变成了：
 
 ~~~ html
 "headers": {
@@ -189,4 +193,4 @@ $http.get('https://api.github.com/users/liuwenzhuang/repos').then(function(respo
 
 ## 总结
 
-$http作为Angular中的核心service，其功能非常强大便捷，今天描述了其子功能http拦截器的概念和描述方式，有理解不正确的地方，请大家留言告知。
+$http作为Angular中的核心service，其功能非常强大便捷，今天描述了其子功能**http拦截器**的概念和描述方式，有理解不正确的地方，请大家留言告知。

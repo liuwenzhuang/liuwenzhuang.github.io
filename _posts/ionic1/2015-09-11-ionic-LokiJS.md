@@ -22,7 +22,7 @@ LokiJS是JS库，并使用内存数据库，所以拥有更快的性能，更加
 
 LokiJS被创造出来的原因之一是为了提供一个可以替代SQLite在cordova app中的作用。
 
-LokiJS的缺点很明显，它不具有很强大的数据同步能力，但是其[Changes API][changes-api]能够记录对本地数据库的所有更改，可以使用[Changes API][Changes API][changes-api]同步数据库。所以如果我们的app只需要在本地存储数据，使用LokiJS是再合适不过了，因为其对数据库的所有操作都在内存中完成，所以速度更快。
+LokiJS的缺点很明显，它不具有很强大的数据同步能力，但是其[Changes API][changes-api]能够记录对本地数据库的所有更改，可以使用[Changes API][changes-api]同步数据库。所以如果我们的app只需要在本地存储数据，使用LokiJS是再合适不过了，因为其对数据库的所有操作都在内存中完成，所以速度更快。
 
 ## 安装
 
@@ -282,3 +282,7 @@ function OverviewController($scope, $ionicModal, $ionicPlatform, birthdayService
 
 ### 结语
 可以看出，使用LokiJS作为本地存储简单易用，唯一麻烦的地方是为ionic app选择合适的adapter。使用JSON文件的方式存储效果还是不错的，我已经在Android和IOS测试完成。
+
+> 参考文档：<br>
+> [localStorage在混合移动应用中是不可靠的]({% post_url 2015-08-30-localstorage-is-not-reliable-in-hybrid-apps %})<br>
+> [ionic app中使用PouchDB+SQLite作为本地存储]({% post_url 2015-11-03-ionic-PouchDB-SQLite %})

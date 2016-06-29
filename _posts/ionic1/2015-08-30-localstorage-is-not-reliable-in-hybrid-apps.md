@@ -43,3 +43,7 @@ IOS 8，当系统内存不足时，localStorage可能会被清除，就像ionic�
 ## 替代方案
 
 在hybrid app中，如果需要兼顾体验感和持久化存储，那么可以使用SQLite数据库。一种方案是使用PouchDB，一个开源的JavaScript框架，PouchDB封装了WebSQL, IndexedDB和SQLite。如果想了解如何使用PouchDB，可以查看我的另一篇[译文]({% post_url 2015-11-03-ionic-PouchDB-SQLite %})。另一种解决方案是使用LokiJS，LokiJS是一个快速的内存数据库，如果想了解如何使用LokiJS，可以查看我的另一篇译文[ionic App使用LokiJS作为本地存储]({% post_url 2015-09-11-ionic-LokiJS %})。
+
+> 参考文档：<br>
+> [ionic App使用LokiJS作为本地存储]({% post_url 2015-09-11-ionic-LokiJS %})<br>
+> [ionic app中使用PouchDB+SQLite作为本地存储]({% post_url 2015-11-03-ionic-PouchDB-SQLite %})
