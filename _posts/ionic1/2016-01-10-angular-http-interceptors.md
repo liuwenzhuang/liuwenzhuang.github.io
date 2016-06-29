@@ -144,17 +144,15 @@ request: function(config) {
 }
 ~~~
 
-### 利用**response拦截器**实现响应数据序列化
+### 利用**response拦截器**模拟实现Angular JSON易损性(JSON vulnerability)防御
 
-开发中，我们期望后台返回规范的JSON数据格式，但是因为各种原因可能服务器不能符合我们的期望，返回的数据格式可能是字符串或是其他形式，这样就不利于我们在前台展示，此时我们就可以通过**response拦截器**将响应数据格式化成JSON格式：
+Angular在$http请求安全性方面不仅为我们设计了XSRF(CSRF)防御，而且针对请求JSON数据的Url可能通过类似于<script>标签加载的方式被恶意网站获取到我们的JSON数据的情况，设计了Angular JSON易损性(JSON vulnerability)防御，即Server端返回的JSON数据头部可以添加`")]}',\n"`字符串，得到包含此前缀的响应数据后，Angular会将此前缀删去，将响应还原成正式的JSON数据。此时我们就可以通过**response拦截器**模拟此过程：
 
 ~~~ javascript
 response: function(response) {
-    if(response.headers()['content-type'] === "application/json; charset=utf-8"){
-        var data = examineJSONResponse(response); // 假设存在这样一个方法
-        if(!data) {
-            response = validateJSONResponse(response); // 假设存在这样一个方法
-        }
+    var data = examineJSONResponse(response); // 假设存在这样一个方法
+    if(!data) {
+        response = validateJSONResponse(response); // 假设存在这样一个方法
     }
     return response || $q.when(reponse);
 }

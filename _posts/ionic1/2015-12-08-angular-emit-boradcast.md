@@ -8,7 +8,7 @@ keywords: AngularJS, $scope, $rootScope, event, 事件机制, $broadcast, $emit,
 ---
 Angular按照**发布/订阅模式**设计了其事件系统，使用时需要“发布”事件，并在适当的位置“订阅”或“退订”事件，就像邮箱里面大量的订阅邮件一样，当我们不需要时就可以将其退订了。具体到开发中，对应着$scope和$rootScope的`$emit`、`$broadcast`和`$on`方法。本文介绍Angular的事件机制，包括$scope和$rootScope处理事件上的异同，$broadcast、$emit和$on的使用方式及他们区别等内容。
 
-## $scope与$scope之间的关系，$scope与$rootScope`之间的关系
+## $scope与$scope之间的关系，$scope与$rootScope之间的关系
 
 要理解Angular的事件机制，首先需要了解`$scope`与`$scope`之间的关系以及`$scope`与`$rootScope`之间的关系。`$rootScope`是唯一真神，是万域起源，是所有`$scope`的最终祖先。而`$scope`与`$scope`之间可能的关系包括父子关系和兄弟关系。还记得controller之间的关系吗，Angular为每个controller分配一个独立的`$scope`，controller之间的关系也对应着`$scope`之间的关系：
 
