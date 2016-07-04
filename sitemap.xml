@@ -8,104 +8,97 @@
 
 <url>
   <loc>http://liuwenzhuang.github.io/</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>1.00</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/ionic1/</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/ionic2/</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/about/</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/2016/05/ionic2-scroll-performance-virtualscroll</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/2016/04/Ionic-Unit-Tests</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/2016/02/ionic2-installation</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/2016/01/ionic-modify-navigation-rules</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://liuwenzhuang.github.io/2016/01/angular-http-interceptors</loc>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://liuwenzhuang.github.io/2015/12/angular-emit-boradcast</loc>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/2015/12/ionic-like-native</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/2015/11/ionic-minify-obfuscation</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/2015/11/ionic-PouchDB-SQLite</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://liuwenzhuang.github.io/2015/09/ionic-LokiJS</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://liuwenzhuang.github.io/2015/09/ionic-project-structure-origranization</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/blog/page2/</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://liuwenzhuang.github.io/2015/09/ionic-LokiJS</loc>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://liuwenzhuang.github.io/2015/09/ionic-project-structure-origranization</loc>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/2015/08/localstorage-is-not-reliable-in-hybrid-apps</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/2014/11/ionic-installation</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://liuwenzhuang.github.io/index.html</loc>
-  <lastmod>2016-06-07T10:16:09+00:00</lastmod>
+  <lastmod>2016-06-29T14:05:20+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 </urlset>
