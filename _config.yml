@@ -9,7 +9,7 @@ baseurl: ""
 url: ""
 urlPrefix: http://liuwenzhuang.github.io
 fixedNav: 'true' # true or false
-theme: dinky # green, blue, orange, purple, grey
+theme: jekyll-theme-dinky
 twitterUsername: liuwenzhuang
 githubUsername: liuwenzhuang
 codepenUsername: liuwenzhuang
