@@ -25,4 +25,8 @@
   span {
     color: rgba(#fff, .5);
   }
+
+  @media screen and (max-width: 567px) {
+    display: none;
+  }
 }

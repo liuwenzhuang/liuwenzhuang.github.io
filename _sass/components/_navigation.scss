@@ -24,6 +24,9 @@
   &.is-fixed {
     position: fixed;
     will-change: transform;
+    @media screen and (max-width: 567px) {
+      position: absolute;
+    }
   }
 }
 
@@ -55,5 +58,10 @@
   &:hover:after,
   &.is-active:after {
     background: $c__white;
+  }
+
+  @media screen and (max-width: 567px) {
+    width: 100%;
+    text-align: center;
   }
 }

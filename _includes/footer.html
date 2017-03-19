@@ -1,11 +1,26 @@
-<footer class="c-footer">
-  <div class="u-container c-footer__container">
-    <p>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
-    <p>
-      <!--{% if site.twitterUsername %}<a href="https://twitter.com/{{ site.twitterUsername }}">Twitter</a>{% endif %}-->
-      {% if site.githubUsername %}<a href="https://github.com/{{ site.githubUsername }}">Github</a>{% endif %}
-      <!--{% if site.dribbbleUsername %}<a href="https://dribbble.com/{{ site.dribbbleUsername }}">Dribbble</a>{% endif %}-->
-      {% if site.codepenUsername %}<a href="http://codepen.io/{{ site.codepenUsername }}">CodePen</a>{% endif %}
-    </p>
+<footer class="footer">
+  <div class="wrapper">
+    <div class="footer__copyright">
+      &copy; {{ site.title }} {{ site.time | date: '%Y' }} - Liu Wenzhuang
+    </div>
+    <div class="footer__links">
+      <ul>
+        <li>
+          <a href="https://github.com/{{ site.githubUsername }}" target="_blank">
+            <img src="{{ site.baseurl }}/assets/images/icons/github.png" alt="Liu Wenzhuang on GitHub">
+          </a>
+        </li>
+        <li>
+          <a href="http://codepen.io/{{ site.codepenUsername }}" target="_blank">
+            <img src="{{ site.baseurl }}/assets/images/icons/codepen.svg" alt="Liu Wenzhuang on CodePen">
+          </a>
+        </li>
+        <li>
+          <a href="http://blog.csdn.net/u010730126" target="_blank">
+            <img src="{{ site.baseurl }}/assets/images/icons/csdn.png" alt="Liu Wenzhuang on CSDN">
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </footer>
