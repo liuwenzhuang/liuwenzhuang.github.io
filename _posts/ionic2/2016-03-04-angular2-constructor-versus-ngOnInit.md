@@ -1,7 +1,8 @@
 ---
 title: 'Angular之constructor和ngOnInit差异及适用场景'
-date: 2016-03-26 21:23:45
+date: 2016-03-04 21:23:45
 tag: ionic2
+thumbnail: 'angular_logo.png'
 keywords: Input, Component, Ionic CLI, Angular 2, class, 类， construcotr, 构造函数, ngOnInit, ES6, 差别异同, TypeScript, 生命周期, lifecycle hooks
 excerpt: Angular中根据适用场景定义了很多生命周期函数，其本质上是事件的响应函数，其中最常用的就是ngOnInit。但在TypeScript或ES6中还存在着名为constructor的构造函数，那ngOnInit和constructor之间有什么区别呢？它们各自的适用场景又是什么呢？
 ---

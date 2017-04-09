@@ -2,6 +2,7 @@
 title: 'Angular 2 父子组件数据通信'
 date: 2016-03-11 21:23:45
 tag: ionic2
+thumbnail: 'angular_logo.png'
 keywords: Event, EventEmitter, @Output, Component, ngModel, @Input, 双向数据绑定, 单向数据绑定, Angular 2, class, 类， construcotr, 构造函数, ngOnInit, 父子组件, 组件间数据传递
 excerpt: 如今的前端开发，都朝组件式开发模式靠拢，如果使用目前最流行的前端框架Angular和React开发应用，不可避免地需要开发组件，也就意味着我们需要考虑组件间的数据传递等问题。而Angular 2中通过事件机制为我们提供了很好的解决方案。
 ---
