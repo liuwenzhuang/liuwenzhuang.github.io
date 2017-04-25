@@ -1,6 +1,6 @@
 ---
 title: 'Angular 2 利用Router事件和Title实现动态页面标题'
-date: 2016-03-23 21:23:45
+date: 2016-03-17 21:23:45
 tag: ionic2
 thumbnail: 'angular_logo.png'
 keywords: Event, Routes, Title, Component, 动态页面标题， Angular2 设置页面标题， ngOnInit
