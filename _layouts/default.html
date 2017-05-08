@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html class="t-{{ site.theme }}">
-  {% include head.html %}
-  <body>
-    {% include navigation.html %}
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
+  {% include head.html %}
+
+  <body>
     {{ content }}
-    <!-- Adsense开始 -->
-    {% include advertisements.html %}
-    <!-- Adsense结束 -->
+
     {% include footer.html %}
+
   </body>
+
 </html>

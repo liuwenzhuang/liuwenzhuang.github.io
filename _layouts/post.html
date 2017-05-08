@@ -1,4 +1,51 @@
 ---
-layout: page
+layout: default
 ---
-    {{ content }}
+<style type="text/css">
+  {% if page.header-img %}
+  .site-header {
+    background: no-repeat center center;
+    background-color: gray;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-image: url('{{ site.baseurl }}/img/header-images/{{ page.header-img }}')
+  }
+  {% endif %}
+
+</style>
+<header class="site-header" role="banner">
+  {% include nav.html %}
+  <div class="site-intro">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta" style="color:rgba(255, 255, 255, .4)">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% if page.author %}
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">{{ page.author }}</span>
+      </span>
+      {% endif %}
+    </p>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <!--<header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>-->
+
+      <div class="post-content" itemprop="articleBody">
+        {{ content }}
+      </div>
+
+      {% if site.disqus.shortname %}
+        {% include disqus_comments.html %}
+      {% endif %}
+    </article>
+  </div>
+</main>

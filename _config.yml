@@ -1,41 +1,52 @@
-# Site settings
-title: Ionic和Angular开发移动App笔记
-email: liu1114589929@gmail.com
-description: >
-  技术的变化是必然的，前端的技术变革尤其迅速，现在的手机App一般需要开发三端，即Android、iOS和微信端，这就意味着一个产品需要三个团队来做，这就意味着开发成本的提升，而Ionic和AngularJS为我们带来了一揽子解决方案的可能，使用Ionic和AngularJS等前端技术开发出的App也越来越贴近原生App了，这其中不仅仅是样子像，而且性能上也越来越靠近。特别是Ionic 1到Ionic 2的转变，其背后是Angular 1向Angular 2的转变，都意味着性能的提升，开发的方便。
-keywords: >
-  Ionic 1, Angular 1, Ionic 2, Angular 2, Cordova, 混合移动App开发框架, 前端开发, AngularJS, 使用Ionic和Angular等前端技术开发手机App, Android开发, iOS开发, 微信开发
-baseurl: ""
-url: ""
-urlPrefix: http://liuwenzhuang.github.io
-fixedNav: 'true' # true or false
-theme: jekyll-theme-dinky
-twitterUsername: liuwenzhuang
-githubUsername: liuwenzhuang
-codepenUsername: liuwenzhuang
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-comments:
-    disqus: "liuwenzhuang"
-#    isso: "comments.mysite.org"
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: 前端拙见
+author: 刘文壮
+email: liu1114589929@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: liuwenzhuang
+github_username:  liuwenzhuang
+codepen_username: liuwenzhuang
+csdn_usercode: u010730126
+disqus_username: liuwenzhuang
+
+disqus:
+  shortname: liuwenzhuang
+
+github:
+  url: http://liuwenzhuang.github.io/
+
+repository: liuwenzhuang/liuwenzhuang.github.io
 
 # Build settings
-permalink: /:year/:month/:title
 markdown: kramdown
-include: [_pages]
-exclude: [_site]
-sass:
-  style: compressed #minify css
+#theme: minima
+#sass:
+#  style: compressed #minify css
 
 paginate: 9
 paginate_path: "/blog/page:num/"
-gems: [jekyll-paginate]
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      comments: true
-      categories: ['ionic', 'angular']
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock
