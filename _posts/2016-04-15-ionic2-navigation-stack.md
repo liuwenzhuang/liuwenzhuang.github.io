@@ -1,6 +1,6 @@
 ---
 title: 'Ionic 2之页面堆栈'
-date: 2016-02-26 21:23:45
+date: 2016-04-15 21:23:45
 tag: ionic2
 keywords: Cordova, 页面堆栈, 页面路由, Angular 2, @Page, Ionic 2基础, Ionic 2 basement, 堆栈, TypeScript, NavController, Navigation Stack
 excerpt: 还记得Ionic 1中的state和router吗？他们两兄弟配合起来完成页面导航的功能，虽然它们使用起来并不算复杂，概念也很清晰，不过当页面增多、state嵌套等问题出现后复杂度也会增加，当复杂程度到达一定程度时工程必然难以维护和理解。而Ionic 2效仿原生页面堆栈的概念解决了上述问题。
