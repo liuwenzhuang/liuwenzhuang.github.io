@@ -3,7 +3,7 @@
  */
 .post {
   background-color: $background-color;
-  padding: 40px 64px;
+  padding: 40px 0;
   @include media-query-max($on-laptop) {
     padding:  20px;
   }
@@ -76,7 +76,7 @@
     border-left: 4px solid $green-color;
     position: relative;
     overflow: auto;
-    margin: 48px -64px;
+    margin: 48px 0;
     white-space: pre;
     word-wrap: normal;
     background: #2d313a;
@@ -123,8 +123,8 @@
     margin: 40px 0;
     border-left: 4px solid $green-color;
     position: relative;
-    margin-left: -64px;
-    margin-right: -64px;
+    // margin-left: -64px;
+    // margin-right: -64px;
     text-align: left;
     @include media-query-max($on-laptop) {
       margin-left: -40px;
