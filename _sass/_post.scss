@@ -5,25 +5,46 @@
   background-color: $background-color;
   padding: 40px 0;
   @include media-query-max($on-laptop) {
-    padding:  20px;
+    padding: 20px;
   }
 
   @include media-query-max($on-palm) {
-    padding: 10px 24px;
+    padding: 10px;
   }
 
-  h1, h2, h3 {
+  table {
+    display: block;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+    th,
+    td {
+      padding: 6px 13px;
+      border: 1px solid #dfe2e5;
+    }
+
+    & + p {
+      margin-top: 24px;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
     text-align: center;
     padding-top: 47px;
     text-align: center;
     margin-bottom: 40px;
     @include media-query-max($on-palm) {
-        margin-bottom: 20px;
-        padding-top: 20px;
+      margin-bottom: 20px;
+      padding-top: 20px;
     }
   }
 
-/*  h2, h3 {
+  /*  h2, h3 {
       padding-top: 47px;
       text-align: center;
       margin-bottom: 40px;
@@ -32,43 +53,48 @@
           padding-top: 20px;
       }
   }*/
-  p+h1 {
+  p + h1 {
     margin-top: 40px;
     @include media-query-max($on-palm) {
-        margin-top: 32px;
+      margin-top: 32px;
     }
   }
 
-  p+h2 {
-      margin-top: 32px;
-      @include media-query-max($on-palm) {
-          margin-top: 24px;
-      }
+  p + h2 {
+    margin-top: 32px;
+    @include media-query-max($on-palm) {
+      margin-top: 24px;
+    }
   }
 
-  p+h3 {
-      margin-top: 20px;
-      @include media-query-max($on-palm) {
-          margin-top: 12px;
-      }
+  p + h3 {
+    margin-top: 20px;
+    @include media-query-max($on-palm) {
+      margin-top: 12px;
+    }
   }
 
-  h1+h2, h1+h3, h2+h3, h2+h4, h3+h4 {
-      margin-top: 0;
-      padding-top: 0;
+  h1 + h2,
+  h1 + h3,
+  h2 + h3,
+  h2 + h4,
+  h3 + h4 {
+    margin-top: 0;
+    padding-top: 0;
   }
 
-  h2+blockquote, h3+blockquote {
-      margin-top: 0;
+  h2 + blockquote,
+  h3 + blockquote {
+    margin-top: 0;
   }
 
   p {
     line-height: 30px;
     @include media-query-max($on-laptop) {
-        line-height: 30px;
+      line-height: 30px;
     }
     @include media-query-max($on-palm) {
-        line-height: 24px;
+      line-height: 24px;
     }
     img {
       margin: 16px 0;
@@ -83,7 +109,7 @@
     white-space: pre;
     word-wrap: normal;
     background: #2d313a;
-    color: #C1C2C3;
+    color: #c1c2c3;
     @include media-query-max($on-laptop) {
       margin: 48px -40px;
     }
@@ -117,25 +143,19 @@
   blockquote {
     background: #f8f3ff;
     padding: 32px 64px 32px 64px;
+    margin: 40px -24px;
+    border-left: 4px solid $green-color;
+    position: relative;
+    text-align: left;
     @include media-query-max($on-laptop) {
       padding: 24px 40px 24px 40px;
+      margin-left: -18px;
+      margin-right: -18px;
     }
     @include media-query-max($on-palm) {
       padding: 16px 30px 16px 30px;
-    }
-    margin: 40px 0;
-    border-left: 4px solid $green-color;
-    position: relative;
-    // margin-left: -64px;
-    // margin-right: -64px;
-    text-align: left;
-    @include media-query-max($on-laptop) {
-      margin-left: -40px;
-      margin-right: -40px;
-    }
-    @include media-query-max($on-palm) {
-      margin-left: -24px;
-      margin-right: -24px;
+      margin-left: -12px;
+      margin-right: -12px;
     }
     code {
       color: #6947a0;
@@ -193,11 +213,11 @@
   margin-bottom: $spacing-unit;
 
   h1 {
-      font-size: 38px;
+    font-size: 38px;
 
-      @include media-query-max($on-laptop) {
-          font-size: 34px;
-      }
+    @include media-query-max($on-laptop) {
+      font-size: 34px;
+    }
   }
 
   h2 {
