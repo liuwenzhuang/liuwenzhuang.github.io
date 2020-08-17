@@ -257,7 +257,6 @@ PLATFORMS
 DEPENDENCIES
   activesupport (>= 4.1.11)
   github-pages
-  jekyll (>= 3.9.0)
   jekyll-feed (~> 0.6)
   jekyll-paginate
   jemoji
