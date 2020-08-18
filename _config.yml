@@ -17,9 +17,10 @@ title: 无声告白
 author: 刘文壮
 email: liu1114589929@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  不定期分享一些日常开发中遇到的问题及解决方案，大部分和前端开发相关，如Angular、Vue、React等前端框架，
+  也会有些诸如如git、VSCode等开发工具的相关知识。
+  Aperiodically share some questions and anwsers in daily develop, almost releate to
+  frontend develop, eg. Angular, Vue, React. Develop tools like git, VSCode will also touch.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: liuwenzhuang
