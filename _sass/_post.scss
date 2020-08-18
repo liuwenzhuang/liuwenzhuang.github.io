@@ -12,6 +12,21 @@
     padding: 10px;
   }
 
+  .post-menus {
+    list-style: none;
+    margin-bottom: 24px;
+    max-height: 200px;
+    overflow-y: auto;
+    @for $i from 1 through 6 {
+      &.min-level-#{$i} {
+        margin-left: 16px * ($i - 1) * -1;
+      }
+      .post-menu-#{$i} {
+        margin-left: 16px * ($i - 1);
+      }
+    }
+  }
+
   table {
     display: block;
     border-collapse: collapse;
