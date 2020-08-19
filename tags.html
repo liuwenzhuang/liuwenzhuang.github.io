@@ -1,0 +1,49 @@
+---
+layout: home
+title: 标签
+permalink: /tags/
+---
+
+<div class="tags">
+  {% assign rawtags = "" | split:'' %}
+  {% assign tagLens = "" | split:'' %}
+  {% for post in site.posts %}
+    {% assign posttags = post.tags | join:'|' %}
+    {% assign posttags = posttags | upcase %}
+    {% assign posttags = posttags | split:'|' %}
+    {% assign rawtags = rawtags | concat:posttags %}
+  {% endfor %}
+
+  {% assign uniqtags = rawtags | sort | uniq %}
+
+  {% for tag in uniqtags %}
+  {% assign lens = rawtags | where_exp: "item", "item == tag" %}
+  {% assign tagLens = tagLens | push:lens.size %}
+  {% endfor %}
+
+  {% assign index = 0 %}
+  <ul class="post-tags">
+    {% for tag in uniqtags %}
+    <li class="post-tag-item">
+      <a href="/tags/#{{ tag }}"># {{ tag }} ({{ tagLens[index] }})</a>
+    </li>
+    {% assign index = index | plus: 1 %}
+    {% endfor %}
+  </ul>
+
+  <ul class="tag-list">
+    {% for tag in uniqtags %}
+    <section class="tag-item">
+      <h1 class="tag-item-title" id="{{ tag }}"># {{ tag }}</h1>
+      {% for post in site.posts %}
+      {% assign posttagsstr = post.tags | join:'|' %}
+      {% assign posttagsstr = posttagsstr | upcase %}
+      {% if posttagsstr contains tag %}
+      <a class="post-title-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+      {% endif %}
+      {% endfor %}
+    </section>
+    {% endfor %}
+  </ul>
+</div>
+<script src="{{ site.baseurl }}/scripts/post-enhance.js"></script>

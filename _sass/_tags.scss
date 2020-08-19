@@ -1,0 +1,22 @@
+.tags {
+  .post-tags {
+    display: flex;
+    flex-flow: row wrap;
+    .post-tag-item {
+      margin-right: 16px;
+    }
+  }
+
+  .tag-list {
+    list-style: none;
+    .tag-item-title {
+      margin-bottom: 24px;
+    }
+    .post-title-link {
+      color: #384455;
+      display: block;
+      font-weight: 400;
+      margin-bottom: 0.75em;
+    }
+  }
+}

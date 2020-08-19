@@ -3,6 +3,36 @@
  */
 .home {
   background-color: $background-color;
+  display: flex;
+  .post-container {
+    flex: auto;
+  }
+  .post-tags {
+    padding-top: 48px;
+    flex: 0 0 120px;
+    list-style: none;
+    margin-left: 0;
+    .post-tag-item {
+      font-weight: 400;
+      margin-bottom: 0.75em;
+      font-size: 0.8em;
+      a {
+        color: #000;
+      }
+    }
+  }
+  @include media-query-max($on-laptop) {
+    flex-flow: column;
+    .post-tags {
+      flex: auto;
+      display: flex;
+      flex-flow: row wrap;
+      padding: 0 24px;
+      .post-tag-item {
+        margin-right: 16px;
+      }
+    }
+  }
 }
 
 .page-content {
@@ -91,6 +121,7 @@
 
 .post-item-content {
   color: #282f3a;
+  text-align: left;
 }
 
 .post-button {

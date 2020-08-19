@@ -3,73 +3,102 @@ layout: home
 ---
 
 <div class="home">
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-    <section class="post-item">
-      <header class="post-item-header">
-        <h1 class="post-item-title">
-          <a
-            class="post-title-link"
-            href="{{ post.url | prepend: site.baseurl }}"
-            >{{ post.title | escape }}</a
-          >
-          {% include icon-arrow-right.html className="nav-icon-right" %}
-        </h1>
-        <span class="post-meta">
-          {{ post.date | date: "%b %-d, %Y" }}
-        </span>
-        <div class="post-meta-divider"></div>
-      </header>
-      <a
-        href="{{ post.url | prepend: site.baseurl }}"
-        class="post-item-content"
-        title="Read {{ post.title | escape }}"
-      >
-        <p>
-          {{ post.excerpt | strip_html | truncatewords: 30 }}
-        </p>
-      </a>
-      <div class="post-button">
+  <div class="post-container">
+
+    <ul class="post-list">
+      {% for post in paginator.posts %}
+      <section class="post-item">
+        <header class="post-item-header">
+          <h1 class="post-item-title">
+            <a
+              class="post-title-link"
+              href="{{ post.url | prepend: site.baseurl }}"
+              >{{ post.title | escape }}</a
+            >
+            {% include icon-arrow-right.html className="nav-icon-right" %}
+          </h1>
+          <span class="post-meta">
+            {{ post.date | date: "%b %-d, %Y" }}
+          </span>
+          <div class="post-meta-divider"></div>
+        </header>
         <a
           href="{{ post.url | prepend: site.baseurl }}"
-          class="button"
+          class="post-item-content"
           title="Read {{ post.title | escape }}"
         >
-          <span>Read more</span>
+          <p>
+            {{ post.excerpt | strip_html | truncatewords: 30 }}
+          </p>
+        </a>
+        <div class="post-button">
+          <a
+            href="{{ post.url | prepend: site.baseurl }}"
+            class="button"
+            title="Read {{ post.title | escape }}"
+          >
+            <span>Read more</span>
+            {% include icon-greater-than.html %}
+          </a>
+        </div>
+      </section>
+      {% endfor %}
+    </ul>
+
+    <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>-->
+    <!-- 分页器 -->
+    {% if paginator.total_pages > 1 %}
+    <ul class="pagination">
+      {% if paginator.previous_page %}
+      <li class="post-button">
+        <a
+          href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+          class="button"
+          title="Previous"
+        >
+          {% include icon-less-than.html %}
+          Newer Blogs
+        </a>
+      </li>
+      {% endif %} {% if paginator.next_page %}
+      <li class="post-button">
+        <a
+          href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+          class="button next"
+          title="Next"
+        >
+          Older Blogs
           {% include icon-greater-than.html %}
         </a>
-      </div>
-    </section>
+      </li>
+      {% endif %}
+    </ul>
+    {% endif %}
+  </div>
+
+  {% assign rawtags = "" | split:'' %}
+  {% assign tagLens = "" | split:'' %}
+  {% for post in site.posts %}
+    {% assign posttags = post.tags | join:'|' %}
+    {% assign posttags = posttags | upcase %}
+    {% assign posttags = posttags | split:'|' %}
+    {% assign rawtags = rawtags | concat:posttags %}
+  {% endfor %}
+
+  {% assign uniqtags = rawtags | sort | uniq %}
+
+  {% for tag in uniqtags %}
+  {% assign lens = rawtags | where_exp: "item", "item == tag" %}
+  {% assign tagLens = tagLens | push:lens.size %}
+  {% endfor %}
+
+  {% assign index = 0 %}
+  <ul class="post-tags">
+    {% for tag in uniqtags %}
+    <li class="post-tag-item">
+      <a href="/tags/#{{ tag }}"># {{ tag }} ({{ tagLens[index] }})</a>
+    </li>
+    {% assign index = index | plus: 1 %}
     {% endfor %}
   </ul>
-
-  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>-->
-  <!-- 分页器 -->
-  {% if paginator.total_pages > 1 %}
-  <ul class="pagination">
-    {% if paginator.previous_page %}
-    <li class="post-button">
-      <a
-        href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-        class="button"
-        title="Previous"
-      >
-        {% include icon-less-than.html %}
-        Newer Blogs
-      </a>
-    </li>
-    {% endif %} {% if paginator.next_page %}
-    <li class="post-button">
-      <a
-        href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-        class="button next"
-        title="Next"
-      >
-        Older Blogs
-        {% include icon-greater-than.html %}
-      </a>
-    </li>
-    {% endif %}
-  </ul>
-  {% endif %}
 </div>
