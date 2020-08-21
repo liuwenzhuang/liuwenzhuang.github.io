@@ -1,7 +1,7 @@
 ---
 title: '使用git bisect确定引入问题的提交'
 date: 2016-08-03 09:23:45
-tag: ['git', 'debug']
+tag: ['git']
 keywords: Git调试, 'git bisect', 'git debug', 'git确定问题'
 excerpt: git bisect是一个git命令，和git pull、git push等常用的命令一样。它的用途是利用二分查找算法快速确定引起问题的提交，在项目维护中有极大用处。
 ---

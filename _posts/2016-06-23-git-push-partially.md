@@ -1,7 +1,7 @@
 ---
 title: 'git push某个或某些特定提交'
 date: 2016-06-23 21:23:45
-tag: ['git','rebase']
+tag: ['git']
 keywords: Git部分提交, 'git rebase', 'git push', '远程分支'
 excerpt: 当我们在本地仓库开发时，暂存区可能有多次提交等待推送(`git push`)到远程，而我们目前只做完了其中某些需求，此时我们想要将做完的需求涉及的提交推送到远程，`git push`和`git rebase -i`就可以做到。
 ---
