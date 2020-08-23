@@ -1,7 +1,7 @@
 ---
 title: 字体图标的使用与设计
 date: 2016-10-20 09:43:00
-tag: ['iconfont']
+tag: ['svg']
 keywords: iconfont,design,usage,svg
 excerpt: 字体图标（iconfont）虽然有要被淘汰的趋势，但是在其服役期间也解决了其他方案的很多痛点，虽然不建议继续使用字体图标了，但如果有维护老项目的需求可以看一看。
 ---

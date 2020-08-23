@@ -1,7 +1,7 @@
 ---
 title: inline svg 的使用
 date: 2017-03-13 15:43:00
-tag: ["inline SVG", "iconfont"]
+tag: ["svg"]
 excerpt: inline svg是目前前端图标解决方案的最优解（当然不仅限于图标），而且使用方式也及其简单，只要将svg图标代码当成普通的html元素来使用即可。
 ---
 

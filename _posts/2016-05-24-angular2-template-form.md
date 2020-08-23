@@ -1,7 +1,7 @@
 ---
 title: 'Angular2 Form之模板驱动'
 date: 2016-05-24 21:23:45
-tag: ['angular2','form']
+tag: ['angular2']
 keywords: Angular 2, TypeScript, Form, template-driven, model, 模板, 模型, 表单
 excerpt: Web前端开发中，form表单的设计永远是重头戏，Angular 2提供了两种构建form表达的方式：模板驱动和模型驱动。其相应的处理方式以及API方面都有很大不同，本文先介绍我们最熟悉的模板驱动的form表单设计方式，包括`ngForm`、`ngModel`、`ngModelGroup`、`ngSubmit`等Angular 2在模板驱动中必不可少的directives。
 ---
