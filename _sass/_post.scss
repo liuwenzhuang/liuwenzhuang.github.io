@@ -281,3 +281,33 @@ h5:hover .header-link,
 h6:hover .header-link {
   opacity: 1;
 }
+
+/**
+ * prev and next page link
+ */
+.page-navigation {
+  padding-top: $spacing-unit;
+  border-top: 1px dashed $grey-color-light;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  .prev,
+  .next {
+    flex: 1;
+  }
+  .next {
+    text-align: right;
+  }
+  @include media-query-max($on-palm) {
+    flex-flow: column nowrap;
+    .prev,
+    .next {
+      text-align: center;
+    }
+    .next {
+      margin-top: 16px;
+    }
+  }
+}
