@@ -262,6 +262,14 @@
       font-size: 18px;
     }
   }
+
+  ul,
+  ol {
+    list-style: initial;
+    li + li {
+      margin-top: 12px;
+    }
+  }
 }
 
 /**
