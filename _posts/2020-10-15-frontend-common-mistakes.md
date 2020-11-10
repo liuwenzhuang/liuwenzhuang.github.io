@@ -11,6 +11,22 @@ excerpt: 乍看起来前端开发编码可能是最容易的，因为 JavaScript
 
 自从 ES5 对数组实现了 `forEach`、`map` 等遍历函数，很多开发者就将 for 循环束之高阁了，但很多时候却忽视了一点：**for 循环的速度是最快的，甚至 10 倍于 `forEach`**，在小数组上可能差异不大，但对大数组的处理上，请优先考虑一下 for 循环。
 
+## 数组多次 splice
+
+`Array.prototype.splice`是一个强大的功能，可以用来删除、添加元素，但是其操作是根据下标为标准的，很多开发者针对静态数组进行多次增删处理时没有注意到下标的变化：
+
+```ts
+const socials = ["wechat", "qq", "dingtalk", "wangwang"];
+
+// 在内部环境下去掉 wechat 和 qq
+socials.splice(0, 1);
+socials.splice(1, 1);
+
+console.log(socials); // ["qq", "wangwang"]
+```
+
+看起来没什么错误，但得到的结果可能确是不正确的，这是因为进行`splice`操作后没有注意到元素的下标可能发生的变化。
+
 ## 多个 Promise 嵌套
 
 在逻辑复杂时，可能会遇到 Promise 依赖的情况，很多开发者会写出类似下面的代码：
