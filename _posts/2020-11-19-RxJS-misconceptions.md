@@ -10,6 +10,8 @@ excerpt: 本文收集了一些在学习 RxJS 过程中发现的容易忽略或�
 [lwz-marble-test]: https://github.com/liuwenzhuang/learn-rxjs-by-test/blob/master/test/marble-test.spec.ts
 [reactive-program-newbie]: https://gist.github.com/staltz/868e7e9bc2a7b8c1f754
 
+[marble-test-blog]: {% post_url 2021-01-19-RxJS-marble-test %}
+
 本文收集了一些在学习 RxJS 过程中发现的容易忽略或比较容易弄错的概念，并尝试对其进行解释。
 
 > 本文涉及的代码均在 [RxJS v6][rxjsv6] 版本，其他版本区别不大，基本概念是相同的。
@@ -89,7 +91,7 @@ from(["a", null, "b"])
 
 而对于时间不敏感的操作，比如类似 `from([1, 2, 3])` 的操作来说，时间看似是没什么作用的，但是也是有时间概念的：_1_ _2_ _3_ 和 _结束_ 都在一个时间片段中发出，但对于 Observer 来说仍然是按顺序一个个到达的。
 
-RxJS 为我们提供了量化时间的方法： [Marble Test][marbletest]{:target="_blank"}，关于这个主题后面会新开一文详细地解释，本文暂不赘述，我写了[一些 Marble Test 用例][lwz-marble-test]{:target="_blank"}，有兴趣地可以先看下。
+RxJS 为我们提供了量化时间的方法： [Marble Test][marbletest]{:target="\_blank"}，关于这个主题可查看[这里][marble-test-blog]，本文暂不赘述，我写了[一些 Marble Test 用例][lwz-marble-test]{:target="\_blank"}，有兴趣地可以先看下。
 
 ## 如何理解高阶 Observable
 
@@ -99,11 +101,12 @@ RxJS 为我们提供了量化时间的方法： [Marble Test][marbletest]{:targe
 import { from, of } from "rxjs";
 import { map } from "rxjs/operators";
 
-from([1, 2, 3]).pipe(
-  map(value => of(value))
-).subscribe(value$ => { // Observer 1 得到 Observable 1
-  value$.subscribe(console.log) // Observer 2 得到 Observab 1 推送的值
-})
+from([1, 2, 3])
+  .pipe(map((value) => of(value)))
+  .subscribe((value$) => {
+    // Observer 1 得到 Observable 1
+    value$.subscribe(console.log); // Observer 2 得到 Observab 1 推送的值
+  });
 // OUTPUT: 1
 // OUTPUT: 2
 // OUTPUT: 3
