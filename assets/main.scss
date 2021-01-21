@@ -1,36 +1,38 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
 
 // Define defaults for each variable.
 
-$base-font-family: -apple-system, "Helvetica Neue", Helvetica, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", Arial, sans-serif !default;
-$base-font-size:   16px !default;
+$base-font-family: -apple-system, "Helvetica Neue", Helvetica, "Microsoft YaHei",
+  "微软雅黑", STXihei, "华文细黑", Arial, sans-serif !default;
+$base-font-size: 16px !default;
 $base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
+$small-font-size: $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
-$spacing-unit:     30px !default;
+$spacing-unit: 30px !default;
 
-$text-color:       #111 !default;
+$text-color: #111 !default;
 $background-color: white !default;
-$brand-color:      #7b1fa2 !default;
+$brand-color: #7b1fa2 !default;
 
-$grey-color:       #828282 !default;
+$grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$grey-color-dark: darken($grey-color, 25%) !default;
 
-$green-color:      #7953b5;
+$green-color: #7953b5;
 
-$purple:           #7953b5;
-$white:            #fff;
+$purple: #7953b5;
+$white: #fff;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width: 800px !default;
 
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+$on-palm: 600px !default;
+$on-laptop: 800px !default;
 
 // Use media queries like this:
 // @include media-query-max($on-palm) {
@@ -52,13 +54,5 @@ $on-laptop:        800px !default;
 }
 
 // Import partials.
-@import
-  "base",
-  "header",
-  "footer",
-  "page",
-  "post",
-  "tags",
-  "syntax-highlighting"
-;
-
+@import "base", "header", "footer", "page", "post", "tags",
+  "syntax-highlighting", "normalize";
