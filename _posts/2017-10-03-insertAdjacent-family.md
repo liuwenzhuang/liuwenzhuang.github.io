@@ -61,6 +61,8 @@ element.insertAdjacentHTML(position, text);
 
 可以看到，`insertAdjacentHTML`不仅能够实现插入元素的功能，还能够灵活控制相对于调用元素的插入位置。
 
+> 不能用于动态插入 `<script>` 标签的场景，根据 [html5 规范](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)，通过 `innerHTML` 的方式插入的 `<script>` 标签不会被执行。而 `insertAdjacentHTML` 和 `innerHTML` 的本质上是相同的。
+
 ## insertAdjacentElement
 
 上文提到`insertAdjacentHTML`会先对传入的字符串进行解析转换为Element再进行插入，而其胞弟`insertAdjacentElement`相当于省略了解析转换的步骤，因为其直接操作的对象就是Element：
