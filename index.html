@@ -28,7 +28,7 @@ layout: home
           title="Read {{ post.title | escape }}"
         >
           <p>
-            {{ post.excerpt | strip_html | truncatewords: 30 }}
+            {{ post.excerpt | strip_html | markdownify | truncatewords: 30 }}
           </p>
         </a>
         <div class="post-button">
