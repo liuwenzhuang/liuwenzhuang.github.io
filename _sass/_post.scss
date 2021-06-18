@@ -273,8 +273,11 @@
   ul,
   ol {
     list-style: initial;
-    li + li {
-      margin-top: 12px;
+    li {
+      line-height: 1.8;
+      & + li {
+        margin-top: 12px;
+      }
     }
   }
 }
