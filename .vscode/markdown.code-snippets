@@ -20,5 +20,10 @@
     "prefix": ["img", "insert-img"],
     "body": ["![${2:描述信息}](/img/posts/${1:文件名}.png)", "", "$0"],
     "description": "Insert Img to markdown"
+  },
+  "Bold Text": {
+    "scope": "markdown",
+    "prefix": ["bold", "bd"],
+    "body": ["**${TM_SELECTED_TEXT}**$0"]
   }
 }
