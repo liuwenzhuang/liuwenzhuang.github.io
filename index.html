@@ -10,12 +10,14 @@ layout: home
       <section class="post-item">
         <header class="post-item-header">
           <h1 class="post-item-title">
+            {% if post.translate %}
+            <a href="{{ post.translate }}" target="_blank">{% include icon-translate.html className="nav-icon-translate" %}</a>
+            {% endif %}
+
             <a
               class="post-title-link"
               href="{{ post.url | prepend: site.baseurl }}"
-              >{{ post.title | escape }}</a
-            >
-            {% include icon-arrow-right.html className="nav-icon-right" %}
+              >{{ post.title | escape }} {% include icon-arrow-right.html className="nav-icon-right" %}</a>
           </h1>
           <span class="post-meta">
             {{ post.date | date: "%b %-d, %Y" }}

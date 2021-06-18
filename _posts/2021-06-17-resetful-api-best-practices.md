@@ -1,6 +1,7 @@
 ---
 title: RESTful API 设计指南 - 最佳实践
 date: 2021-06-17 07:23:12
+translate: https://medium.com/hackernoon/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9
 tag: ["Tools"]
 excerpt: 本文是对 *Mahesh Haldar* 发布在 Medium 上 [文章](https://medium.com/hackernoon/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9){:target="_blank"} 的译文。
 ---

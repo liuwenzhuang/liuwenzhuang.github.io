@@ -105,12 +105,6 @@
 
   p {
     line-height: 30px;
-    @include media-query-max($on-laptop) {
-      line-height: 30px;
-    }
-    @include media-query-max($on-palm) {
-      line-height: 24px;
-    }
     img {
       margin: 16px 0;
       & + em {
@@ -125,6 +119,7 @@
 
   .highlighter-rouge {
     margin-bottom: 16px;
+    word-break: break-all;
   }
 
   pre {
