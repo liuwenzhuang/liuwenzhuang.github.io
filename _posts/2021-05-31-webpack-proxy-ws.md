@@ -50,6 +50,41 @@ _http-proxy 配置合并_
 
 > 这里是 `http-proxy@1.18.1` 的代码截图，其他版本可能略有差异。
 
+## 服务重启造成的 read ECONNRESET 异常
+
+在开发过程中，由于后端服务会经常重新部署重启，发现会出现 `Error: read ECONNRESET` 异常：
+
+```bash
+at TCP.onStreamRead (internal/stream_base_commons.js:183:27) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+```
+
+我的本地开发环境信息：
+
+```json
+"webpack": "^4.44.1",
+"webpack-dev-server": "^3.11.0"
+
+node v12.6.0
+npm 6.9.0
+```
+
+此异常会造成 `webpack-dev-server` 启动的服务挂掉，暂时还没时间查找具体的原因，但因为是未捕获的异常造成的，我们可以在全局处理一下 `uncaughtException` 事件：
+
+```js
+// webpack.config.js
+
+const process = require('process');
+
+process.on('uncaughtException', function (err) {
+    // 开发时，websocket proxy 会因服务重新部署而报错中断本地 server，这里拦截一下
+    console.log('拦截未处理异常:', err);
+});
+```
+
 ## 更多
 
 - [Node.js 调试][nodejs-debug]{:target="\_blank"}
