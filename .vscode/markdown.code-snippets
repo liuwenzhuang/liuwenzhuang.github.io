@@ -25,5 +25,11 @@
     "scope": "markdown",
     "prefix": ["bold", "bd"],
     "body": ["**${TM_SELECTED_TEXT}**$0"]
+  },
+  "Insert New Tab Link": {
+    "scope": "markdown",
+    "prefix": ["ntlink", "insert-new-tab-link"],
+    "body": ["[${1:描述信息}](${2:链接地址}){:target=\"_blank\"}$0"],
+    "description": "Insert new tab link to markdown"
   }
 }
