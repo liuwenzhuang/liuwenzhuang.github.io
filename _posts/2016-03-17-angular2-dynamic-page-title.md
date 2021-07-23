@@ -2,6 +2,7 @@
 title: 'Angular 2 利用Router事件和Title实现动态页面标题'
 date: 2016-03-17 21:23:45
 tag: ionic2
+translate: https://toddmotto.com/dynamic-page-titles-angular-2-router-events
 thumbnail: 'angular_logo.png'
 keywords: Event, Routes, Title, Component, 动态页面标题， Angular2 设置页面标题， ngOnInit
 excerpt: Angular2 为我们提供了名为Title的Service用于修改和获取页面标题，但是如果只是能够在每个页面的ngOnInit方法中为每个页面设置标题岂不是太low了，不符合Angular2高(zhuang)大(bi)的身影。我们想要的结果是在页面改变时能够动态地改变页面标题，如此最好的解决方案就是组合使用Router事件和Title Service。

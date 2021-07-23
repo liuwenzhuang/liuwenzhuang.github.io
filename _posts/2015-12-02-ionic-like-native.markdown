@@ -2,6 +2,7 @@
 title:  "使ionic应用效果更加贴近原生"
 date:   2015-12-02 12:11:21
 tag: ionic1
+translate: http://scottbolinger.com/4-ways-to-make-your-ionic-app-feel-native/
 keywords: Ionic应用性能优化, 原生应用, 混合应用更加贴近于原生, Crosswalk WebView的使用, Ionic应用使用原生动画
 excerpt: 由于设备性能的提高以及混合开发技术的优化，原生开发和混合开发之间的界限越来越不明显了，使用过Ionic的开发者会感觉控件等样式方面已经很贴近于原生应用了，但还是能够感觉到性能上略显不足，本文介绍了如何通过一些方法对Ionic应用进行进一步优化，使得Ionic应用性能更加贴近于原生应用。
 ---

@@ -2,6 +2,7 @@
 title: 'ionic代码压缩与代码混淆'
 date: 2015-11-30 17:06:03
 tag: ionic1
+translate: https://www.airpair.com/ionic-framework/posts/production-ready-apps-with-ionic-framework
 keywords: Ionic应用发布, Ionic代码压缩, Ionic代码混淆, 代码压缩与代码混淆, cordova hook和gulp在Ionic应用中的使用
 excerpt: 开发应用的最后一步总是需要进行代码压缩和代码混淆，当然Ionic应用也不例外，代码压缩可以在一定程度上优化我们应用的性能，而代码混淆可以在一定程度上保护我们辛苦完成的代码。本文介绍了Ionic应用发布之前的最后一步，即进行代码压缩与代码混淆，其中需要使用gulp构建工具以及cordova为我们提供的cordova hook体系。
 ---

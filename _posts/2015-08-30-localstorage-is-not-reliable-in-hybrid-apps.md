@@ -2,6 +2,7 @@
 title: "localStorage在混合移动应用中是不可靠的"
 date: 2015-08-30 22:30:02
 tag: ionic1
+translate: http://gonehybrid.com/dont-assume-localstorage-will-always-work-in-your-hybrid-app/
 thumbnail: 'localstorage.jpg'
 thumbnail_alt: 'localStorage在混合移动应用中是不可靠的'
 keywords: H5, localStorage, Ionic 1本地存储, 本地存储被清除, 混合开发移动应用

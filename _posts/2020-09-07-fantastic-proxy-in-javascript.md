@@ -2,6 +2,7 @@
 title: 为什么Proxy是ES6的瑰宝？
 date: 2020-09-07 10:23:12
 tag: ["JavaScript"]
+translate: https://medium.com/javascript-in-plain-english/why-proxies-in-javascript-are-fantastic-db100ddc10a0
 excerpt: Proxy是什么？它是做什么的？
 ---
 

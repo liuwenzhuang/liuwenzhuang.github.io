@@ -2,6 +2,7 @@
 title: 'ionic app中使用PouchDB+SQLite作为本地存储'
 date: 2015-11-03 19:38
 tag: ionic1
+translate: http://gonehybrid.com/how-to-use-pouchdb-sqlite-for-local-storage-in-your-ionic-app/
 thumbnail: 'Ionic_PouchDB.png'
 thumbnail_alt: 'ionic App使用PouchDB+SQLite作为本地存储'
 keywords: Ionic本地存储被清除, cordova SQLite插件, Ionic使用PouchDB作为本地存储, Ionic工程使用数据库, 混合开发移动应用, NO SQL数据库

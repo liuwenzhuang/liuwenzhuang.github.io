@@ -2,6 +2,7 @@
 title: 'ionic App使用LokiJS作为本地存储'
 date: 2015-09-11 17:45:03
 tag: ionic1
+translate: http://gonehybrid.com/how-to-use-lokijs-for-local-storage-in-your-ionic-app/
 thumbnail: 'Ionic_LokiJS.png'
 thumbnail_alt: 'ionic App使用LokiJS作为本地存储'
 keywords: Ionic本地存储被清除, cordova-plugin-file插件, Ionic使用LokiJS作为本地存储, Ionic工程使用数据库, 混合开发移动应用, NO SQL数据库
