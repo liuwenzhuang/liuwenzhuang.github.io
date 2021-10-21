@@ -60,7 +60,7 @@ function getNext10ScheduleTime(firstSchedule: number, period: number = 1) {
 
 Day.js 默认是 immutable 的，所以 B 行的 _add()_ 调用后 _timeEntity_ 本身没有变化，所以需要将返回值重新赋值。其实对于 Moment.js 来说，_add()_ 也会返回一个值，但这个值是对 _timeEntity_ 的直接修改后的结果。
 
-> 所有涉及到日期对象的操作修改，如 _add()_、_subtract()_、_year()_、_set()_ 等操作，都符合上文所述，需要注意。如果你的项目中大量依赖此类逻辑的话，Day.js 通过插件提供了一种**[不推荐的方案][dayjs-mutable]**用以适配此类情况。
+> 所有涉及到日期对象的操作修改，如 _add()_、_subtract()_、_year()_、_set()_、_startOf()_、_endOf()_ 等操作，都符合上文所述，需要注意，也正是因为 Moment.js 的 mutable 特性，所以才想要使用 Day.js 将其替换。如果你的项目中大量依赖此类逻辑的话，Day.js 通过插件提供了一种**[不推荐的方案][dayjs-mutable]**用以适配此类情况。
 
 ## Day.js 的插件系统
 
