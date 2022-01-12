@@ -52,7 +52,7 @@ Content-Type: text/css; charset=utf-8
 
 但此属性只是指示了 index.html 的编码，并不能影响其中引用资源文件的编码。关于此配置的文档可查看[MDN 文档][charset mdn]。
 
-> 服务器配置方面，应该为 js、css 等资源文件的 Content-Type 头部中指定 utf-8 编码。**此方案能够解决此问题未经实际验证**，可配合后续的方案使用更加保险。
+> 服务器配置方面，应该为 js、css 等资源文件的 Content-Type 头部中指定 utf-8 编码。**此方案能否解决此问题未经实际验证**，可配合后续的方案使用更加保险。
 
 ## 方案 2 - 在 sass-loader 配置中为 dart-sass 指定 sassOptions
 
