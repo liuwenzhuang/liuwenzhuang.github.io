@@ -76,6 +76,8 @@ Content-Type: text/css; charset=utf-8
 
 将 `outputStyle` 配置修改后，最终生成的样式文件是未经压缩的，这会对文件体积有影响，此时可结合 [css-minimizer-webpack-plugin][css-minimizer-webpack-plugin] 使用，具体用法可查看其文档，此处不再赘述。
 
+> css-minimizer-webpack-plugin@1 版本适用于 webpack@4；css-minimizer-webpack-plugin@2 以上适用于 webpack@5。
+
 ## 方案 3 - 定义 scss 函数，替代直接书写 unicode 字面量
 
 此方案详情，可查看此 [stack overflow 回复][stack-overflow-question]。
