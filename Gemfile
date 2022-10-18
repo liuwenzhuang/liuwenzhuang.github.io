@@ -22,7 +22,7 @@ gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
-   gem "nokogiri", "~> 1.11.4"
+   gem "nokogiri", "~> 1.13.9"
    gem "wdm", ">= 0.1.0"
    gem "jemoji"
    gem "jekyll-paginate"
